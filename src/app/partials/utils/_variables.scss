@@ -1,0 +1,39 @@
+@import "../base/police";
+//body size
+$full-height: 100vh;
+$full-width: 100%;
+//body background
+$register-image-background: url('../../../assets/font/Fond2C.png');
+$principal-image-background: url('../../../assets/font/Fond2A.png');
+$secondary-image-background: url('../../../assets/font/Fond2B.png');
+$third-image-background: url('../../../assets/font/Fond4.png');
+//images
+$coverage-image-timeline: url('../../../assets/images/Triooo_assets1C.png');
+//colors
+$principal-blue: #005ED1;
+$secondary-blue: #1084ED;
+$principal-dark: #192432;
+$principal-transparent-cover: linear-gradient(90deg,
+rgba(25,
+36,
+50,
+.75) 0%,
+rgba(25,
+36,
+50,
+.75) 32%,
+rgba(25,
+36,
+50,
+.75) 100%);
+$principal-white: #fafaf9;
+//text size
+$great-title-size: 3rem;
+$middle-title-size: 1rem;
+$button-text-size: .9rem;
+$small-text-size: 0.9rem;
+//text-police
+$general-text-police: ('Nexa',
+sans-serif);
+$general-text-bold: ('Nexa Bold',
+sans-serif);

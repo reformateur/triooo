@@ -1,0 +1,229 @@
+//imports
+@import "../../partials/utils/variables";
+@import "../../partials/utils/mixins";
+@import "~swiper/css";
+@import "~swiper/css/effect-coverflow";
+@import "~swiper/css/pagination";
+//page container parent
+.page-container-parent {
+    color: $principal-dark;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+
+.a-menuAndCategories {
+    text-decoration: none;
+    color: $principal-white;
+    &:hover {
+        text-decoration: none;
+        color: $principal-white;
+    }
+}
+
+//navbar top
+.navbar {
+    background: $principal-white;
+    margin-top: 10px;
+    background: linear-gradient(90deg, rgba(250, 250, 249, .1) 0%, rgba(250, 250, 249, .3) 32%, rgba(250, 250, 249, .2) 100%);
+    height: 70px;
+    z-index: 35;
+}
+
+.btn-categories {
+    background: $secondary-blue;
+    background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+    font-size: $button-text-size;
+    margin-left: 20px;
+    @include button-default;
+    &:hover {
+        background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, 0) 32%, rgba(16, 132, 237, .1) 100%);
+    }
+    &:focus {
+        border-color: #ced4da;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.navbar-collapse {
+    @include centered-bloc;
+    .nav-link {
+        margin-right: 50px;
+        color: $principal-dark;
+        cursor: pointer;
+        font-size: $button-text-size;
+    }
+}
+
+.navbar-brand {
+    cursor: pointer;
+    & img {
+        border-radius: 50px;
+        border: 1px solid $principal-white;
+        padding: 5px;
+    }
+}
+
+//cover
+.couverture-page {
+    background: $principal-transparent-cover;
+    width: $full-width;
+    height: $full-height;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    display: none;
+    .couverture-page-row {
+        @include centered-bloc;
+        width: 60%;
+        text-align: center;
+        color: $principal-white;
+        cursor: pointer;
+        margin-top: 5vh;
+        & img {
+            border-radius: 50%;
+            padding: 10px;
+            border: 1px solid $principal-white;
+            margin-bottom: 10px;
+            &:hover {
+                height: 140px;
+            }
+        }
+        & .profil {
+            border-radius: 50%;
+            padding: 17px;
+            border: 1px solid $principal-white;
+            &:hover {
+                height: 150px;
+            }
+        }
+    }
+    .couverture-page-categories-row {
+        width: 70%;
+        text-align: center;
+        color: $principal-white;
+        cursor: pointer;
+        margin-top: 5vh;
+        display: none;
+        .coverture-page-row_icone--returnTimeline svg {
+            margin-top: -3vh;
+        }
+    }
+}
+
+//event profil bloc
+.eventProfil-bloc {
+    background: linear-gradient(90deg, rgba(250, 250, 249, .3) 0%, rgba(250, 250, 249, .5) 32%, rgba(250, 250, 249, .4) 100%);
+    width: 85%;
+    height: 70vh;
+    margin-top: 10vh;
+    margin-left: 7.5%;
+    border-radius: 3px;
+    padding: 1.5%;
+    @include centered-bloc;
+    &>.row {
+        height: $full-width;
+        width: $full-width;
+        & .eventBloc {
+            background-position: center;
+            background-size: cover;
+            height: $full-width;
+            border-radius: 3px;
+            border-right: 1px solid $principal-white;
+            background: linear-gradient(90deg, rgba(16, 132, 237, .02) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, .02) 100%);
+            @include centered-bloc;
+            & .row {
+                height: $full-width;
+                width: $full-width;
+                padding-top: 20px;
+                & .event-image {
+                    @include event-image;
+                }
+                & .event-image--thirtyThreeOne {
+                    background-image: url('../../../assets/images/categories/musique/Triooo_timeline84.png');
+                }
+            }
+        }
+    }
+}
+
+.event-details {
+    padding: 0;
+    padding-left: 5%;
+    &-row {
+        @include centered-bloc;
+        margin-top: -10px;
+        height: $full-width;
+        &__intro {
+            font-size: 0.7rem;
+            cursor: pointer;
+            & svg {
+                color: $principal-blue;
+                margin-right: 5px;
+            }
+        }
+        &__title {
+            font-family: $general-text-bold;
+        }
+        &__button {
+            font-size: 0.9rem;
+            & button {
+                background: $secondary-blue;
+                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+                font-size: $button-text-size;
+                @include button-default;
+                border-radius: 15px;
+                margin-top: -10px;
+                &:hover {
+                    background: linear-gradient(90deg, rgba(16, 132, 237, .2) 0%, rgba(16, 132, 237, .2) 32%, rgba(16, 132, 237, .1) 100%);
+                }
+                &:focus {
+                    border-color: #ced4da;
+                    border: none !important;
+                    outline: none !important;
+                    box-shadow: none !important;
+                }
+            }
+        }
+        &__nameAndContry {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.eventDescription {
+    height: $full-width;
+    border-radius: 3px;
+    background: linear-gradient(90deg, rgba(16, 132, 237, .02) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, .02) 100%);
+    @include centered-bloc;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2vh;
+    & .dateAndTime {
+        word-spacing: 5px;
+        margin-bottom: 30px;
+        & p {
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+    }
+    & .description {
+        word-spacing: 3px;
+        margin-bottom: 30px;
+        & p {
+            font-size: 0.9rem;
+            text-align: left;
+        }
+    }
+    & .statut {
+        word-spacing: 5px;
+        font-size: 0.9rem;
+        & span {
+            font-weight: bold;
+        }
+    }
+}

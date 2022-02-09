@@ -1,0 +1,168 @@
+//imports
+@import "../../partials/utils/variables";
+@import "../../partials/utils/mixins";
+//page container parent
+.page-container-parent {
+    @include background-image($register-image-background);
+    color: $principal-dark;
+    overflow: hidden;
+    & .row-container {
+        width: $full-width;
+        height: $full-height;
+        @include centered-bloc;
+        margin: 0 auto;
+    }
+}
+
+//navbar top
+.navbar {
+    background: $principal-white;
+    margin-top: 10px;
+    background: linear-gradient(90deg, rgba(250, 250, 249, .1) 0%, rgba(250, 250, 249, .3) 32%, rgba(250, 250, 249, .2) 100%);
+}
+
+.navbar-brand {
+    color: $principal-dark;
+    cursor: pointer;
+    & span {
+        font-size: 1rem;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+    }
+}
+
+.navbar-collapse {
+    @include centered-bloc;
+}
+
+.nav-link {
+    margin-right: 50px;
+    color: $principal-dark;
+    cursor: pointer;
+    font-size: $button-text-size;
+}
+
+.btn-register {
+    background: $secondary-blue;
+    background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+    font-size: $button-text-size;
+    margin-left: 20px;
+    @include button-default;
+    &:hover {
+        background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, 0) 32%, rgba(16, 132, 237, .1) 100%);
+    }
+    &:focus {
+        border-color: #ced4da;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.btn-login {
+    display: none;
+}
+
+//welcome block message left
+.welcome-bloc-left {
+    text-align: left;
+    padding-left: 30px;
+    margin-top: -10vh;
+    &__logo {
+        margin-bottom: 80px;
+        cursor: pointer;
+    }
+    &__title h1 {
+        font-family: $general-text-bold;
+        font-size: 2.6rem;
+        line-height: 60px;
+        margin-top: -40px;
+        text-align: left;
+    }
+    &__text {
+        font-size: .9rem;
+        margin-top: 35px;
+        & p span {
+            color: $principal-blue;
+            font-family: $general-text-bold;
+            cursor: pointer;
+        }
+    }
+}
+
+//form block right
+.form-bloc-right {
+    margin-top: 0vh;
+    >form {
+        width: 85%;
+        padding: 0 30px 0 30px;
+        .form-group {
+            width: $full-width;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        .d-grid {
+            @include centered-bloc;
+            & button {
+                background: linear-gradient(90deg, rgba(16, 132, 237, 0) 0%, rgba(16, 132, 237, 0.06) 32%, rgba(16, 132, 237, 0.04) 100%);
+                height: 50px;
+                width: 90px;
+                border-radius: 7px;
+                @include centered-bloc;
+                &:hover {
+                    background: linear-gradient(90deg, rgba(16, 132, 237, 0.01) 0%, rgba(16, 132, 237, 0.09) 32%, rgba(16, 132, 237, 0.04) 100%);
+                }
+                &:focus {
+                    border-color: #ced4da;
+                    border: none !important;
+                    outline: none !important;
+                    box-shadow: none !important;
+                }
+            }
+        }
+    }
+}
+
+.input-group {
+    height: 55px;
+    margin: 0 auto;
+    >.form-control {
+        background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+        border: none;
+        border-radius: 10px;
+        font-size: .9rem;
+        &:focus {
+            border-color: #ced4da;
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+    >.input-group-addon {
+        background: transparent;
+        height: $full-width;
+        width: 50px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        cursor: pointer;
+        @include centered-bloc;
+    }
+}
+
+.forgot-password {
+    text-align: right;
+    font-size: 0.75rem;
+    margin-top: 15px;
+    cursor: pointer;
+    &:hover {
+        color: $principal-blue;
+    }
+}
+
+.signupForm {
+    display: none;
+}
+
+::placeholder {
+    color: $principal-dark;
+}

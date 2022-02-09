@@ -1,0 +1,14 @@
+@import "./app/partials/utils/variables";
+@import "./app/partials/utils/mixins";
+html,
+body {
+    height: $full-width;
+}
+
+body {
+    margin: 0;
+    font-family: $general-text-police;
+    color: $principal-dark;
+    overflow-x: hidden;
+    @include background-image($register-image-background);
+}

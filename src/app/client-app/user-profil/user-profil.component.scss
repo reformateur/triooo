@@ -1,0 +1,427 @@
+//imports
+@import "../../partials/utils/variables";
+@import "../../partials/utils/mixins";
+@import "~swiper/css";
+@import "~swiper/css/effect-coverflow";
+@import "~swiper/css/pagination";
+//page container parent
+.page-container-parent {
+    color: $principal-dark;
+    padding-bottom: 50px;
+}
+
+.a-menuAndCategories {
+    text-decoration: none;
+    color: $principal-white;
+    &:hover {
+        text-decoration: none;
+        color: $principal-white;
+    }
+}
+
+//navbar top
+.navbar {
+    background: $principal-white;
+    margin-top: 10px;
+    background: linear-gradient(90deg, rgba(250, 250, 249, .1) 0%, rgba(250, 250, 249, .3) 32%, rgba(250, 250, 249, .2) 100%);
+    height: 70px;
+    z-index: 35;
+}
+
+.btn-categories {
+    background: $secondary-blue;
+    background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+    font-size: $button-text-size;
+    margin-left: 20px;
+    @include button-default;
+    &:hover {
+        background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, 0) 32%, rgba(16, 132, 237, .1) 100%);
+    }
+    &:focus {
+        border-color: #ced4da;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.navbar-collapse {
+    @include centered-bloc;
+    .nav-link {
+        margin-right: 50px;
+        color: $principal-dark;
+        cursor: pointer;
+        font-size: $button-text-size;
+    }
+}
+
+.navbar-brand {
+    cursor: pointer;
+    & img {
+        border-radius: 50px;
+        border: 1px solid $principal-white;
+        padding: 5px;
+    }
+}
+
+//cover
+.couverture-page {
+    background: $principal-transparent-cover;
+    width: $full-width;
+    height: $full-height;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    display: none;
+    .couverture-page-row {
+        @include centered-bloc;
+        width: 60%;
+        text-align: center;
+        color: $principal-white;
+        cursor: pointer;
+        margin-top: 5vh;
+        & img {
+            border-radius: 50%;
+            padding: 10px;
+            border: 1px solid $principal-white;
+            margin-bottom: 10px;
+            &:hover {
+                height: 140px;
+            }
+        }
+        & .profil {
+            border-radius: 50%;
+            padding: 17px;
+            border: 1px solid $principal-white;
+            &:hover {
+                height: 150px;
+            }
+        }
+    }
+    .couverture-page-categories-row {
+        width: 70%;
+        text-align: center;
+        color: $principal-white;
+        cursor: pointer;
+        margin-top: 5vh;
+        display: none;
+        .coverture-page-row_icone--returnTimeline svg {
+            margin-top: -3vh;
+        }
+    }
+}
+
+//FULL NAME AND PACKAGE OF USER
+.fullNameAndUserPackage-bloc {
+    @include centered-bloc;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+    >.row {
+        width: 100%;
+        @include centered-bloc;
+        text-align: center;
+        & h1 {
+            font-family: $general-text-bold;
+        }
+        & p {
+            font-size: 0.9rem;
+            & span {
+                font-family: $general-text-bold;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+//TABLE MENU PROFIL
+.tableProfilMenu-bloc {
+    margin-top: 25px;
+    width: $full-width;
+    @include centered-bloc;
+    >.row {
+        width: 100%;
+        padding-left: 70px;
+        @include centered-bloc;
+        text-align: center;
+        .OneTable {
+            background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, 0) 100%);
+            height: 60px;
+            width: 200px;
+            text-align: left;
+            padding-top: 15px;
+            margin-right: 60px;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover {
+                background: linear-gradient(90deg, rgba(16, 132, 237, .07) 0%, rgba(16, 132, 237, .09) 32%, rgba(16, 132, 237, 0) 100%);
+            }
+            & p {
+                font-size: 0.9rem;
+                & img {
+                    margin-left: -25px;
+                }
+                & span {
+                    margin-left: 10px;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+//USER SESSION INFO BLOC
+.userSessionInfo-bloc {
+    margin-top: 40px;
+    width: $full-width;
+    @include centered-bloc;
+    height: auto;
+    max-height: 65vh;
+    >.row {
+        width: 100%;
+        @include centered-bloc;
+        text-align: center;
+        & .userSessionInfo {
+            @include centered-bloc;
+            height: $full-width;
+            margin-top: 5vh;
+            cursor: pointer;
+            p {
+                font-size: 0.9rem;
+                text-align: left;
+                font-weight: bold;
+                span {
+                    font-size: 0.8rem;
+                    font-weight: normal;
+                }
+            }
+        }
+        & .profilImageCentered {
+            height: $full-width;
+            @include centered-bloc;
+            border-radius: 40px;
+            cursor: pointer;
+            & img {
+                height: 55vh;
+                width: 300px;
+                padding: 20px;
+                border: 1px solid #909497;
+                border-radius: 44%;
+            }
+        }
+        & .bloc-right {
+            & p {
+                text-align: end;
+                font-weight: bold;
+                & span {
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}
+
+//USER WALLET BLOC
+.userWallet-bloc {
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    height: auto;
+    max-height: 65vh;
+    display: none;
+}
+
+//USER EVENTS BLOC
+.userEvents-bloc {
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: auto;
+    max-height: 65vh;
+    display: none;
+}
+
+.mySwiper {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 540px;
+        height: 300px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, rgba(16, 132, 237, .01) 0%, rgba(16, 132, 237, .03) 32%, rgba(16, 132, 237, .06) 100%);
+        @include centered-bloc;
+        & .row {
+            height: $full-width;
+            width: $full-width;
+            padding-top: 20px;
+            & .event-image {
+                @include event-image;
+            }
+            & .event-image--two {
+                background-image: url('../../../assets/images/categories/coaching/Triooo_timeline8.png');
+            }
+            & .event-image--twentySixTwo {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline28.png');
+            }
+            & .event-image--twentySixOne {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline12.png');
+            }
+            & .event-image--ten {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline17.png');
+            }
+            & .event-image--sixteenOne {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline97.png');
+            }
+            & .event-image--thirtyThreeOne {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline84.png');
+            }
+            & .event-image--twentyEight {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline5.png');
+            }
+        }
+    }
+}
+
+.event-details {
+    padding: 0;
+    &-row {
+        @include centered-bloc;
+        margin-top: -10px;
+        height: $full-width;
+        &__intro {
+            font-size: 0.7rem;
+            cursor: pointer;
+            & svg {
+                color: $principal-blue;
+                margin-right: 5px;
+            }
+        }
+        &__title {
+            font-family: $general-text-bold;
+        }
+        &__button {
+            font-size: 0.9rem;
+            & button {
+                background: $secondary-blue;
+                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+                font-size: $button-text-size;
+                @include button-default;
+                border-radius: 15px;
+                margin-top: -10px;
+                &:hover {
+                    background: linear-gradient(90deg, rgba(16, 132, 237, .2) 0%, rgba(16, 132, 237, .2) 32%, rgba(16, 132, 237, .1) 100%);
+                }
+                &:focus {
+                    border-color: #ced4da;
+                    border: none !important;
+                    outline: none !important;
+                    box-shadow: none !important;
+                }
+            }
+        }
+        &__nameAndContry {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+//USER SETTINGS BLOC
+.userSettings-bloc {
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    height: 65vh;
+    @include centered-bloc;
+    display: none;
+    &>.row {
+        height: $full-width;
+        width: $full-width;
+        @include centered-bloc;
+        & .setting-header {
+            margin-bottom: 20px;
+            & p {
+                font-size: 0.8rem;
+            }
+        }
+        & .setting-InputBloc {
+            & .inputBloc {
+                @include centered-bloc;
+                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, 0.03) 100%);
+                height: 250px;
+                padding-top: 15px;
+                & .input-group {
+                    height: 60px;
+                    width: 90%;
+                    margin-left: 5%;
+                    margin-bottom: 15px;
+                    & .form-control,
+                    & .form-select {
+                        height: 60px;
+                        background: linear-gradient(90deg, rgba(250, 250, 249, .06) 0%, rgba(250, 250, 249, .6) 32%, rgba(250, 250, 249, .2) 100%);
+                        border: none;
+                        font-size: 0.85rem;
+                        text-align: left;
+                        &:focus {
+                            border-color: #ced4da;
+                            border: none !important;
+                            outline: none !important;
+                            box-shadow: none !important;
+                        }
+                    }
+                     ::-webkit-input-placeholder {
+                        color: $principal-dark;
+                    }
+                    & select {
+                        cursor: pointer;
+                    }
+                    & .input-group-text {
+                        height: 60px;
+                        background: linear-gradient(90deg, rgba(250, 250, 249, .2) 0%, rgba(250, 250, 249, .1) 32%, rgba(250, 250, 249, .2) 100%);
+                        border: none;
+                        color: $principal-blue;
+                        width: 100px;
+                        @include centered-bloc;
+                        cursor: pointer;
+                    }
+                }
+                & .btn-changePackage {
+                    background: $principal-blue;
+                    color: $principal-white;
+                    font-size: 0.9rem;
+                    height: 60px;
+                    width: 85%;
+                    margin-left: 7.5%;
+                    margin-bottom: 15px;
+                    &:focus {
+                        border-color: #ced4da;
+                        border: none !important;
+                        outline: none !important;
+                        box-shadow: none !important;
+                    }
+                }
+            }
+        }
+        & .setting-image {
+            & .profilImageCentered {
+                @include centered-bloc;
+                border-radius: 40px;
+                cursor: pointer;
+                & img {
+                    height: 55vh;
+                    width: 300px;
+                    padding: 20px;
+                    border: 1px solid #909497;
+                    border-radius: 44%;
+                }
+            }
+        }
+    }
+}

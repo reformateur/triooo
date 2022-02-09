@@ -1,0 +1,488 @@
+<div class="container-fluid page-container-parent">
+    <!-- TRANSPARENT NAVABAR TOP -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <div class="d-flex">
+                <button class="btn btn-categories"> Catégories </button>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link"> centre d'aide </a>
+                    <a class="nav-link" routerLink="/timeline"> <img src="../../../assets/favicon/Triooo_Logo_IconeA.png" height="25" alt="logo triooo"> </a>
+                    <a class="nav-link"> politique d'utilisation </a>
+                </div>
+            </div>
+            <a class="navbar-brand">
+                <img src="../../../assets/favicon/Triooo_setting_Icone.jpg" id="setting-icon" alt="setting icone" width="35">
+            </a>
+        </div>
+    </nav>
+
+    <!-- COVER -->
+    <div class="couverture-page">
+        <!-- SETTING OPTIONS -->
+        <div class="row couverture-page-row" id="couverture-page-row">
+            <div class="col-lg-4 coverture-page-row_icone">
+                <a routerLink="#" class="a-menuAndCategories">
+                    <img src="../../../assets/favicon/Triooo_closed_icone.png" height="110" alt="icone deconnexion">
+                    <div>
+                        <p> Déconnexion </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 coverture-page-row_icone">
+                <a routerLink="/profil" class="a-menuAndCategories">
+                    <img src="../../../assets/images/Triooo_assets1A.jpeg" height="130" class="profil" alt="photo profil utilisateur">
+                    <div>
+                        <p> Mon compte </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 coverture-page-row_icone">
+                <a routerLink="#" class="a-menuAndCategories">
+                    <img src="../../../assets/favicon/Triooo_setting_Icone.jpg" height="110" alt="icone paramètre">
+                    <div>
+                        <p> Paramètres </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- DIFFERENTS CATEGORIES OPTIONS -->
+        <div class="row couverture-page-row couverture-page-categories-row" id="couverture-page-categories-row">
+            <div class="col-lg-3 coverture-page-row_icone">
+                <a routerLink="/timeline/coaching" class="a-menuAndCategories">
+                    <img src="../../../assets/favicon/Triooo_coaching.jpg" height="110" alt="icone coaching">
+                    <div>
+                        <p> Coaching </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 coverture-page-row_icone">
+                <a routerLink="/timeline/humour" class="a-menuAndCategories">
+                    <img src="../../../assets/favicon/Triooo_humor.png" height="110" alt="icone humour">
+                    <div>
+                        <p> Humour </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 coverture-page-row_icone">
+                <a routerLink="/timeline/musique" class="a-menuAndCategories">
+                    <img src="../../../assets/favicon/Triooo_music.png" height="110" alt="icone  musique">
+                    <div>
+                        <p> Musique </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 coverture-page-row_icone coverture-page-row_icone--returnTimeline">
+                <a routerLink="/timeline" class="a-menuAndCategories">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FULL NAME AND PACKAGE OF USER  -->
+    <div class="fullNameAndUserPackage-bloc">
+        <div class="row">
+            <div>
+                <h1> Franck Kassi </h1>
+            </div>
+            <div>
+                <p> vous êtes automatiquement abonnés au forfait basic depuis votre inscription.
+                    <br>
+                    <span> souscrivez à l'un de nos forfaits premium </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABLE MENU PROFIL  -->
+    <div class="tableProfilMenu-bloc">
+        <div class="row">
+            <div class="col-lg-3 OneTable infoTable">
+                <p>
+                    <img src="../../../assets/favicon/Triooo_info.png" height="30" alt="">
+                    <span> Mes informations </span>
+                </p>
+            </div>
+            <div class="col-lg-3 OneTable walletTable">
+                <p>
+                    <img src="../../../assets/favicon/Triooo_wallet.png" height="30" alt="">
+                    <span> Mon portefeuille </span>
+                </p>
+            </div>
+            <div class="col-lg-3 OneTable eventTable">
+                <p>
+                    <img src="../../../assets/favicon/Triooo_events.png" height="30" alt="">
+                    <span> Mes évènements </span>
+                </p>
+            </div>
+            <div class="col-lg-3 OneTable settingTable">
+                <p>
+                    <img src="../../../assets/favicon/Triooo_setting_Icone.jpg" height="30" alt="">
+                    <span> Paramètres </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- USER SESSION INFO BLOC  -->
+    <div class="userSessionInfo-bloc">
+        <div class="row">
+            <div class="col-lg-3 userSessionInfo bloc-left">
+                <div class="row">
+                    <div>
+                        <p>
+                            <span> Utilisateur </span>
+                            <br>Franck Kassi
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span> Email </span>
+                            <br>frankass@hotmail.fr
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span> Téléphone mobile </span>
+                            <br> 05 22 01 64 55
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span> Pays </span>
+                            <br> Côte d'Ivoire
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 profilImageCentered">
+                <img src="../../../assets/images/Triooo_assets1B.jpeg" alt="photo profil">
+            </div>
+            <div class="col-lg-3 userSessionInfo bloc-right">
+                <div class="row">
+                    <div>
+                        <p>
+                            <span> Spectacles visionnés </span>
+                            <br> 5
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span> Spectacles en attentes </span>
+                            <br> 7
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span> Bons d'achats </span>
+                            <br> 2
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span> Forfaits </span>
+                            <br> Basic
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- USER WALLET BLOC  -->
+    <div class="userWallet-bloc">
+        <p> Les informations du portefeuille ici </p>
+    </div>
+
+    <!-- USER EVENTS BLOC  -->
+    <div class="userEvents-bloc">
+        <swiper [effect]="'coverflow'" [grabCursor]="true" [navigation]="true" [centeredSlides]="true" [slidesPerView]="'auto'" [coverflowEffect]="{
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: false
+                }" [loop]="true" class="mySwiper">
+            <ng-template swiperSlide>
+                <div class="row">
+                    <div class="col-lg-5 event-image event-image--thirtyThreeOne"></div>
+                    <div class="col-lg-7 event-details">
+                        <div class="row event-details-row">
+                            <div class="event-details-row__intro">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                    </svg>
+                                <span> VOIR LE SYNOPSIS </span>
+                            </div>
+                            <div class="event-details-row__title">
+                                <h6> Souffle de vie <br> <img src="../../../assets/favicon/Triooo_music.png" height="30" alt=""> </h6>
+                            </div>
+                            <div class="event-details-row__button">
+                                <button class="btn"> Détails </button>
+                            </div>
+                            <div class="event-details-row__nameAndContry">
+                                <p>
+                                    Lord Lombo, 2 janvier [ RDC ]
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="row">
+                    <div class="col-lg-5 event-image event-image--twentySixTwo"></div>
+                    <div class="col-lg-7 event-details">
+                        <div class="row event-details-row">
+                            <div class="event-details-row__intro">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                    </svg>
+                                <span> VOIR LE SYNOPSIS </span>
+                            </div>
+                            <div class="event-details-row__title">
+                                <h6> Un coup BIM <br> <img src="../../../assets/favicon/Triooo_humor.png" height="30" alt=""> </h6>
+                            </div>
+                            <div class="event-details-row__button">
+                                <button class="btn"> Détails </button>
+                            </div>
+                            <div class="event-details-row__nameAndContry">
+                                <p>
+                                    Braising Girl, 16 février [ Côte D'Ivoire ]
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="row">
+                    <div class="col-lg-5 event-image event-image--twentySixOne"></div>
+                    <div class="col-lg-7 event-details">
+                        <div class="row event-details-row">
+                            <div class="event-details-row__intro">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                    </svg>
+                                <span> VOIR LE SYNOPSIS </span>
+                            </div>
+                            <div class="event-details-row__title">
+                                <h6> Saint valentin <br> <img src="../../../assets/favicon/Triooo_humor.png" height="30" alt=""> </h6>
+                            </div>
+                            <div class="event-details-row__button">
+                                <button class="btn"> Détails </button>
+                            </div>
+                            <div class="event-details-row__nameAndContry">
+                                <p>
+                                    Ange Freddy, 13 février [ Côte D'Ivoire ]
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="row">
+                    <div class="col-lg-5 event-image event-image--ten"></div>
+                    <div class="col-lg-7 event-details">
+                        <div class="row event-details-row">
+                            <div class="event-details-row__intro">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                    </svg>
+                                <span> VOIR LE SYNOPSIS </span>
+                            </div>
+                            <div class="event-details-row__title">
+                                <h6> L'américain <br> <img src="../../../assets/favicon/Triooo_humor.png" height="30" alt=""> </h6>
+                            </div>
+                            <div class="event-details-row__button">
+                                <button class="btn"> Détails </button>
+                            </div>
+                            <div class="event-details-row__nameAndContry">
+                                <p>
+                                    Gohou, 27 février [ Côte D'Ivoire ]
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="row">
+                    <div class="col-lg-5 event-image event-image--twentyEight"></div>
+                    <div class="col-lg-7 event-details">
+                        <div class="row event-details-row">
+                            <div class="event-details-row__intro">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                    </svg>
+                                <span> VOIR LE SYNOPSIS </span>
+                            </div>
+                            <div class="event-details-row__title">
+                                <h6> Louanges des disciples <br> <img src="../../../assets/favicon/Triooo_music.png" height="30" alt=""> </h6>
+                            </div>
+                            <div class="event-details-row__button">
+                                <button class="btn"> Détails </button>
+                            </div>
+                            <div class="event-details-row__nameAndContry">
+                                <p>
+                                    KS BLOOM, 1er février [ Côte D'Ivoire ]
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="row">
+                    <div class="col-lg-5 event-image event-image--sixteenOne"></div>
+                    <div class="col-lg-7 event-details">
+                        <div class="row event-details-row">
+                            <div class="event-details-row__intro">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                    </svg>
+                                <span> VOIR LE SYNOPSIS </span>
+                            </div>
+                            <div class="event-details-row__title">
+                                <h6> Rire et danser <br> <img src="../../../assets/favicon/Triooo_humor.png" height="30" alt=""> </h6>
+                            </div>
+                            <div class="event-details-row__button">
+                                <button class="btn"> Détails </button>
+                            </div>
+                            <div class="event-details-row__nameAndContry">
+                                <p>
+                                    Reír y bailar, 7 février janvier [ Côte d'Ivoire ]
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="row">
+                    <div class="col-lg-5 event-image event-image--two"></div>
+                    <div class="col-lg-7 event-details">
+                        <div class="row event-details-row">
+                            <div class="event-details-row__intro">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                    </svg>
+                                <span> VOIR LE SYNOPSIS </span>
+                            </div>
+                            <div class="event-details-row__title">
+                                <h6> Vaincre la procrastination <br> <img src="../../../assets/favicon/Triooo_coaching.jpg" height="30" alt="">
+                                </h6>
+                            </div>
+                            <div class="event-details-row__button">
+                                <button class="btn"> Détails </button>
+                            </div>
+                            <div class="event-details-row__nameAndContry">
+                                <p>
+                                    Jeanne Zézé, 29 janvier [ Côte D'Ivoire ]
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+
+    <!-- USER WALLET BLOC  -->
+    <div class="userSettings-bloc">
+        <div class="row">
+            <div class="col-lg-12 setting-header">
+                <h1> Paramètre du profil </h1>
+                <p> Editez votre profil pour actualiser les informations de votre compte </p>
+            </div>
+            <div class="col-lg-4 setting-InputBloc">
+                <div class="inputBloc">
+                    <div class="row">
+                        <!-- EDIT EMAIL  -->
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="nouvel email">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                  </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- EDIT NUMBER  -->
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="nouveau numero">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                  </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- EDIT PASSWORD  -->
+                        <div class="input-group">
+                            <input type="password" class="form-control" placeholder="nouveau mot de passe">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                  </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 setting-image">
+                <div class="profilImageCentered">
+                    <img src="../../../assets/images/Triooo_assets1B.jpeg" alt="photo profil">
+                </div>
+            </div>
+            <div class="col-lg-4 setting-InputBloc">
+                <div class="inputBloc">
+                    <div class="row">
+                        <!-- EDIT USER NAME  -->
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="modifier le nom de l'utilisateur">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                  </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- EDIT COUNTRY  -->
+                        <div class="input-group">
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
+                              <option value="1"> Cliquez pour choisir un pays </option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                  </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- EDIT PACKAGE  -->
+                        <button class="btn btn-changePackage"> Changer de forfait </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

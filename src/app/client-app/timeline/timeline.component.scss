@@ -1,0 +1,531 @@
+//imports
+@import "../../partials/utils/variables";
+@import "../../partials/utils/mixins";
+@import "~swiper/css";
+@import "~swiper/css/effect-coverflow";
+@import "~swiper/css/pagination";
+//page container parent
+.page-container-parent {
+    color: $principal-dark;
+    padding-bottom: 50px;
+}
+
+.a-menuAndCategories {
+    text-decoration: none;
+    color: $principal-white;
+    &:hover {
+        text-decoration: none;
+        color: $principal-white;
+    }
+}
+
+//navbar top
+.navbar {
+    background: $principal-white;
+    margin-top: 10px;
+    background: linear-gradient(90deg, rgba(250, 250, 249, .1) 0%, rgba(250, 250, 249, .3) 32%, rgba(250, 250, 249, .2) 100%);
+    height: 70px;
+    z-index: 35;
+}
+
+.btn-categories {
+    background: $secondary-blue;
+    background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+    font-size: $button-text-size;
+    margin-left: 20px;
+    @include button-default;
+    &:hover {
+        background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, 0) 32%, rgba(16, 132, 237, .1) 100%);
+    }
+    &:focus {
+        border-color: #ced4da;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.navbar-collapse {
+    @include centered-bloc;
+    .nav-link {
+        margin-right: 50px;
+        color: $principal-dark;
+        cursor: pointer;
+        font-size: $button-text-size;
+    }
+}
+
+.navbar-brand {
+    cursor: pointer;
+    & img {
+        border-radius: 50px;
+        border: 1px solid $principal-white;
+        padding: 5px;
+    }
+}
+
+//cover
+.couverture-page {
+    background: $principal-transparent-cover;
+    width: $full-width;
+    height: $full-height;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    display: none;
+    .couverture-page-row {
+        @include centered-bloc;
+        width: 60%;
+        text-align: center;
+        color: $principal-white;
+        cursor: pointer;
+        margin-top: 5vh;
+        & img {
+            border-radius: 50%;
+            padding: 10px;
+            border: 1px solid $principal-white;
+            margin-bottom: 10px;
+            &:hover {
+                height: 140px;
+            }
+        }
+        & .profil {
+            border-radius: 50%;
+            padding: 17px;
+            border: 1px solid $principal-white;
+            &:hover {
+                height: 150px;
+            }
+        }
+    }
+    .couverture-page-categories-row {
+        width: 70%;
+        text-align: center;
+        color: $principal-white;
+        cursor: pointer;
+        margin-top: 5vh;
+        display: none;
+        .coverture-page-row_icone--returnTimeline svg {
+            margin-top: -3vh;
+        }
+    }
+}
+
+//coverage top
+.coverage-top {
+    height: 90vh;
+    & .coverage-top-row {
+        height: $full-width;
+        @include centered-bloc;
+        text-align: center;
+        padding: 0 30px 0 80px;
+        &__left-text {
+            z-index: 20;
+            text-align: left;
+            & h1 {
+                font-size: 3rem;
+                font-family: $general-text-bold;
+                margin-bottom: 20px;
+            }
+            & p {
+                font-size: $small-text-size;
+                margin-bottom: 25px;
+            }
+            & button {
+                background: $secondary-blue;
+                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+                font-size: $button-text-size;
+                @include button-default;
+                border-radius: 15px;
+                &:hover {
+                    background: linear-gradient(90deg, rgba(16, 132, 237, .2) 0%, rgba(16, 132, 237, .2) 32%, rgba(16, 132, 237, .1) 100%);
+                }
+                &:focus {
+                    border-color: #ced4da;
+                    border: none !important;
+                    outline: none !important;
+                    box-shadow: none !important;
+                }
+            }
+        }
+        &__centered-image {
+            height: $full-width;
+            margin-top: -14vh;
+            margin-left: -3%;
+            z-index: 5;
+            @include centered-bloc;
+            & img {
+                height: 120vh;
+            }
+        }
+        &__right-text {
+            z-index: 20;
+            text-align: left;
+            padding-left: 40px;
+            & h4 {
+                font-size: 1.5rem;
+                font-family: $general-text-bold;
+            }
+            & p {
+                font-size: $small-text-size;
+            }
+            & .learn-more {
+                color: $principal-blue;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+//searchbar bloc
+.searchbar-bloc {
+    background: $principal-white;
+    z-index: 30;
+    width: 80%;
+    margin-left: 10%;
+    background: linear-gradient(90deg, rgba(16, 132, 237, 0) 0%, rgba(16, 132, 237, 0.06) 32%, rgba(16, 132, 237, 0) 100%);
+    height: 100px;
+    border-radius: 3px;
+    @include centered-bloc;
+    & .input-group {
+        height: 80px;
+        & .form-control {
+            height: 100%;
+            background: linear-gradient(90deg, rgba(250, 250, 249, .06) 0%, rgba(250, 250, 249, .6) 32%, rgba(250, 250, 249, .2) 100%);
+            border: none;
+            font-size: 1.2rem;
+            text-align: center;
+            &:focus {
+                border-color: #ced4da;
+                border: none !important;
+                outline: none !important;
+                box-shadow: none !important;
+            }
+        }
+        & .input-group-text {
+            height: 100%;
+            background: linear-gradient(90deg, rgba(250, 250, 249, .2) 0%, rgba(250, 250, 249, .1) 32%, rgba(250, 250, 249, .2) 100%);
+            border: none;
+            color: $principal-blue;
+            width: 100px;
+            @include centered-bloc;
+            cursor: pointer;
+        }
+    }
+}
+
+::placeholder {
+    color: $principal-dark;
+    font-size: 1.1rem;
+}
+
+//searchbar dropdown bloc
+.searchbar-dropdown-bloc {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: linear-gradient(90deg, rgba(16, 132, 237, .06) 0%, rgba(16, 132, 237, .06) 32%, rgba(16, 132, 237, .02) 100%);
+    margin-top: 10px;
+    z-index: 28;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 0;
+    display: none;
+    &>.row {
+        height: $full-width;
+        height: $full-width;
+        padding: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+//events list bloc
+.events-list-bloc {
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    .one-category-bloc {
+        height: 400px;
+        margin-bottom: 20px;
+        &__name {
+            background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, 0) 100%);
+            height: 60px;
+            width: 180px;
+            text-align: left;
+            padding-top: 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            &:hover {
+                background: linear-gradient(90deg, rgba(16, 132, 237, .07) 0%, rgba(16, 132, 237, .09) 32%, rgba(16, 132, 237, 0) 100%);
+            }
+            & img {
+                margin-left: -15px;
+            }
+            & svg {
+                color: $principal-blue;
+                margin-left: -15px;
+            }
+            & span {
+                margin-left: 15px;
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+.mySwiper {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 540px;
+        height: 300px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, rgba(16, 132, 237, .01) 0%, rgba(16, 132, 237, .03) 32%, rgba(16, 132, 237, .06) 100%);
+        @include centered-bloc;
+        & .row {
+            height: $full-width;
+            width: $full-width;
+            padding-top: 20px;
+            & .event-image {
+                @include event-image;
+            }
+            & .event-image--one {
+                background-image: url('../../../assets/images/categories/coaching/Triooo_timeline51.png');
+            }
+            & .event-image--two {
+                background-image: url('../../../assets/images/categories/coaching/Triooo_timeline8.png');
+            }
+            & .event-image--three {
+                background-image: url('../../../assets/images/categories/coaching/Triooo_timeline37.png');
+            }
+            & .event-image--threeOne {
+                background-image: url('../../../assets/images/categories/coaching/Triooo_timeline53.png');
+            }
+            & .event-image--four {
+                background-image: url('../../../assets/images/categories/coaching/Triooo_timeline4.png');
+            }
+            & .event-image--five {
+                background-image: url('../../../assets/images/categories/coaching/Triooo_timeline43.png');
+            }
+            & .event-image--fiveOne {
+                background-image: url('../../../assets/images/categories/coaching/Triooo_timeline54.png');
+            }
+            & .event-image--six {
+                background-image: url('../../../assets/images/categories/coaching/Triooo_timeline57.png');
+            }
+            & .event-image--seven {
+                background-image: url('../../../assets/images/categories/coaching/Triooo_timeline6.png');
+            }
+            & .event-image--eight {
+                background-image: url('../../../assets/images/categories/coaching/Triooo_timeline1.png');
+            }
+            & .event-image--nine {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline19.png');
+            }
+            & .event-image--ten {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline17.png');
+            }
+            & .event-image--tenOne {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline14.png');
+            }
+            & .event-image--tenTwo {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline94.png');
+            }
+            & .event-image--tenThree {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline98.png');
+            }
+            & .event-image--eleven {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline21.png');
+            }
+            & .event-image--twelve {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline22.png');
+            }
+            & .event-image--thirteen {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline23.png');
+            }
+            & .event-image--fourteen {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline24.png');
+            }
+            & .event-image--fourteenOne {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline106.png');
+            }
+            & .event-image--fourteenTwo {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline107.png');
+            }
+            & .event-image--fifteen {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline25.png');
+            }
+            & .event-image--sixteen {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline26.png');
+            }
+            & .event-image--sixteenOne {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline97.png');
+            }
+            & .event-image--seventeen {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline27.png');
+            }
+            & .event-image--eighteen {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline29.png');
+            }
+            & .event-image--nineteen {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline20.png');
+            }
+            & .event-image--twenty {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline32.png');
+            }
+            & .event-image--twentyOne {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline33.png');
+            }
+            & .event-image--twentyTwo {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline18.png');
+            }
+            & .event-image--twentyThree {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline3.png');
+            }
+            & .event-image--twentyFour {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline7.png');
+            }
+            & .event-image--twentyFourOne {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline35.png');
+            }
+            & .event-image--twentyFive {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline30.png');
+            }
+            & .event-image--twentySix {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline13.png');
+            }
+            & .event-image--twentySixOne {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline12.png');
+            }
+            & .event-image--twentySixTwo {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline28.png');
+            }
+            & .event-image--twentySeven {
+                background-image: url('../../../assets/images/categories/humour/Triooo_timeline34.png');
+            }
+            & .event-image--twentyEight {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline5.png');
+            }
+            & .event-image--twentyNine {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline10.png');
+            }
+            & .event-image--thirty {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline11.png');
+            }
+            & .event-image--thirtyOne {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline9.png');
+            }
+            & .event-image--thirtyTwo {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline31.png');
+            }
+            & .event-image--thirtyTwoOne {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline79.png');
+            }
+            & .event-image--thirtyThree {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline36.png');
+            }
+            & .event-image--thirtyThreeOne {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline84.png');
+            }
+            & .event-image--thirtyThreeTwo {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline75.png');
+            }
+            & .event-image--thirtyFour {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline38.png');
+            }
+            & .event-image--thirtyFive {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline39.png');
+            }
+            & .event-image--thirtyFiveOne {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline76.png');
+            }
+            & .event-image--thirtySix {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline40.png');
+            }
+            & .event-image--thirtySeven {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline56.png');
+            }
+            & .event-image--thirtyEight {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline42.png');
+            }
+            & .event-image--thirtyEightOne {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline74.png');
+            }
+            & .event-image--thirtyEightTwo {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline88.png');
+            }
+            & .event-image--thirtyNine {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline44.png');
+            }
+            & .event-image--Fourty {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline45.png');
+            }
+            & .event-image--FourtyOne {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline47.png');
+            }
+            & .event-image--FourtyTwo {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline50.png');
+            }
+            & .event-image--FourtyThree {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline52.png');
+            }
+            & .event-image--FourtyFour {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline55.png');
+            }
+            & .event-image--FourtyFive {
+                background-image: url('../../../assets/images/categories/musique/Triooo_timeline41.png');
+            }
+        }
+    }
+}
+
+.event-details {
+    padding: 0;
+    &-row {
+        @include centered-bloc;
+        margin-top: -10px;
+        height: $full-width;
+        &__intro {
+            font-size: 0.7rem;
+            cursor: pointer;
+            & svg {
+                color: $principal-blue;
+                margin-right: 5px;
+            }
+        }
+        &__title {
+            font-family: $general-text-bold;
+        }
+        &__button {
+            font-size: 0.9rem;
+            & button {
+                background: $secondary-blue;
+                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+                font-size: $button-text-size;
+                @include button-default;
+                border-radius: 15px;
+                margin-top: -10px;
+                &:hover {
+                    background: linear-gradient(90deg, rgba(16, 132, 237, .2) 0%, rgba(16, 132, 237, .2) 32%, rgba(16, 132, 237, .1) 100%);
+                }
+                &:focus {
+                    border-color: #ced4da;
+                    border: none !important;
+                    outline: none !important;
+                    box-shadow: none !important;
+                }
+            }
+        }
+        &__nameAndContry {
+            font-size: 0.8rem;
+        }
+    }
+}
