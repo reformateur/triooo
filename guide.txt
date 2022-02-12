@@ -7,7 +7,7 @@
 
 ------------------------------------------------------------------- SUITE DU PROGRAMME DE TRAVAIL --------------------------------------------------------------------
 
-* plateforme client ( aujourd'hui entre 12h30 et 15h30 )
+* jeudi 10 fevrier
 
 - page register : [ creation des pages centre d'aides, a propos et politique de conf/ verification typescript du formulaire /responsive ]
 
@@ -20,19 +20,21 @@
 
 - page evenement : [ idem timeline ]
 
-
-* plateforme regies
-
+* plateforme regies 
 
 
-* depôt sur github : 
+
 
 * design germain : 
 
-* preparation du bilan
+* preparation du bilan (13h50 - 15h 50)
 
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- ce soir 21h30 : reunion de finalisation du système d'information/ reunion de l'API de triooo (avec Fabr)
+- demain : reunion de l'API de triooo (avec Fabr)
 
 
 
