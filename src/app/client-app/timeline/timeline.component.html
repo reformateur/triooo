@@ -16,7 +16,7 @@
                 </div>
             </div>
             <a class="navbar-brand">
-                <img src="../../../assets/favicon/Triooo_setting_Icone.jpg" id="setting-icon" alt="setting icone" width="35">
+                <img src="../../../assets/favicon/Triooo_setting_Icone.jpg" class="setting-icon" id="setting-icon" alt="setting icone" width="35">
             </a>
         </div>
     </nav>
@@ -26,7 +26,7 @@
         <!-- SETTING OPTIONS -->
         <div class="row couverture-page-row" id="couverture-page-row">
             <div class="col-lg-4 coverture-page-row_icone">
-                <a routerLink="#" class="a-menuAndCategories">
+                <a routerLink="/register" class="a-menuAndCategories">
                     <img src="../../../assets/favicon/Triooo_closed_icone.png" height="110" alt="icone deconnexion">
                     <div>
                         <p> Déconnexion </p>
@@ -35,14 +35,14 @@
             </div>
             <div class="col-lg-4 coverture-page-row_icone">
                 <a routerLink="/profil" class="a-menuAndCategories">
-                    <img src="../../../assets/images/Triooo_assets1A.jpeg" height="130" class="profil" alt="photo profil utilisateur">
+                    <img src="../../../assets/images/Triooo_assets1A.jpeg" height="120" class="profil" alt="photo profil utilisateur">
                     <div>
                         <p> Mon compte </p>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 coverture-page-row_icone">
-                <a routerLink="#" class="a-menuAndCategories">
+            <div class="col-lg-4 coverture-page-row_icone coverture-page-row_icone--params">
+                <a routerLink="/profil" class="a-menuAndCategories">
                     <img src="../../../assets/favicon/Triooo_setting_Icone.jpg" height="110" alt="icone paramètre">
                     <div>
                         <p> Paramètres </p>
@@ -70,12 +70,27 @@
                 </a>
             </div>
             <div class="col-lg-3 coverture-page-row_icone">
-                <a routerLink="/timeline/musique" class="a-menuAndCategories">
-                    <img src="../../../assets/favicon/Triooo_music.png" height="110" alt="icone  musique">
+                <a routerLink="/timeline/concert" class="a-menuAndCategories">
+                    <img src="../../../assets/favicon/Triooo_music.png" height="110" alt="icone concert">
                     <div>
-                        <p> Musique </p>
+                        <p> Concert </p>
                     </div>
                 </a>
+            </div>
+            <div class="col-lg-12 couverture-page-row_allCategories">
+                <div class="row">
+                    <a routerLink="/timeline" class="a-menuAndCategories">
+
+                        <div>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                                  <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                                </svg> toutes les categories
+                            </p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -84,17 +99,17 @@
     <div class="coverage-top">
         <div class="row coverage-top-row">
             <div class="col-lg-4 coverage-top-row__left-text">
-                <h1> Take Control Of Your Social Media </h1>
+                <h1> Vos évènements vous suivent chez vous </h1>
                 <p>Regardez tous vos spectacles et évènements <br> préférés depuis chez vous. </p>
-                <button class="btn"> Try For Free </button>
+                <button class="btn"> En Savoir Plus </button>
             </div>
             <div class="col-lg-4 coverage-top-row__centered-image">
                 <img src="../../../assets/images/Triooo_assets1C.png" alt="image">
             </div>
             <div class="col-lg-4 coverage-top-row__right-text">
-                <h4> Social Listerning</h4>
-                <p>discover trends and insights about your brand <br> and your competitions. </p>
-                <p class="learn-more"> learn more
+                <h4> </h4>
+                <p> suivez toute l'actualité de Triooo sur nos différentes <br> pages sur les medias sociaux </p>
+                <p class="learn-more"> abonnez-vous
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                     </svg>
@@ -106,7 +121,7 @@
     <!-- SEARCHBAR BLOC -->
     <div class="searchbar-bloc">
         <div class="input-group">
-            <input type="search" class="form-control searchbarFormControl" placeholder="Recherchez un évènement | un spectacle | une date | un artiste | un coach ...">
+            <input type="search" class="form-control form-control-searchbar searchbarFormControl" placeholder="Recherchez un évènement | un spectacle | une date | un artiste | un coach ...">
             <div class="input-group-append">
                 <span class="input-group-text">
                   <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -136,7 +151,7 @@
                                     <h6> Souffle de vie <br> [ 10 000 F CFA ] </h6>
                                 </div>
                                 <div class="event-details-row__button">
-                                    <button class="btn"> Interessé </button>
+                                    <button class="btn" routerLink="/event"> Interessé </button>
                                 </div>
                                 <div class="event-details-row__nameAndContry">
                                     <p>
@@ -220,7 +235,7 @@
                                 </div>
                                 <div class="event-details-row__nameAndContry">
                                     <p>
-                                        KS BLOOM, 1er février [ Côte D'Ivoire ]
+                                        Ks Bloom, 1er février [ Côte D'Ivoire ]
                                     </p>
                                 </div>
                             </div>
@@ -464,7 +479,7 @@
                                     <span> VOIR LE SYNOPSIS </span>
                                 </div>
                                 <div class="event-details-row__title">
-                                    <h4> Sahoua lampadaire <br> [ 5 000 F CFA ] </h4>
+                                    <h6> Sahoua lampadaire <br> [ 5 000 F CFA ] </h6>
                                 </div>
                                 <div class="event-details-row__button">
                                     <button class="btn"> Interessé </button>
@@ -701,7 +716,7 @@
                                     <h6> Souffle de vie <br> [ 10 000 F CFA ] </h6>
                                 </div>
                                 <div class="event-details-row__button">
-                                    <button class="btn"> Interessé </button>
+                                    <button class="btn" routerLink="/event"> Interessé </button>
                                 </div>
                                 <div class="event-details-row__nameAndContry">
                                     <p>
@@ -1748,7 +1763,7 @@
             <div class="one-category-bloc__name">
                 <p>
                     <img src="../../../assets/favicon/Triooo_music.png" height="30" alt="">
-                    <span> Musique </span>
+                    <span> Concert </span>
                 </p>
             </div>
 
@@ -1778,7 +1793,7 @@
                                 </div>
                                 <div class="event-details-row__nameAndContry">
                                     <p>
-                                        KS BLOOM, 1er février [ Côte D'Ivoire ]
+                                        Ks Bloom, 1er février [ Côte D'Ivoire ]
                                     </p>
                                 </div>
                             </div>
@@ -1956,7 +1971,7 @@
                                     <h6> Souffle de vie <br> [ 10 000 F CFA ] </h6>
                                 </div>
                                 <div class="event-details-row__button">
-                                    <button class="btn"> Interessé </button>
+                                    <button class="btn" routerLink="/event"> Interessé </button>
                                 </div>
                                 <div class="event-details-row__nameAndContry">
                                     <p>

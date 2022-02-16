@@ -58,7 +58,7 @@
 
 .navbar-brand {
     cursor: pointer;
-    & img {
+    & .setting-icon {
         border-radius: 50px;
         border: 1px solid $principal-white;
         padding: 5px;
@@ -81,24 +81,32 @@
         @include centered-bloc;
         width: 60%;
         text-align: center;
-        color: $principal-white;
         cursor: pointer;
+        color: $principal-white;
         margin-top: 5vh;
-        & img {
-            border-radius: 50%;
-            padding: 10px;
-            border: 1px solid $principal-white;
-            margin-bottom: 10px;
-            &:hover {
-                height: 140px;
+        font-family: $general-text-light;
+        font-size: 0.8rem;
+        .coverture-page-row_icone {
+            & img {
+                border-radius: 50%;
+                padding: 10px;
+                border: 1px solid $principal-white;
+                margin-bottom: 10px;
+                &:hover {
+                    height: 140px;
+                }
             }
-        }
-        & .profil {
-            border-radius: 50%;
-            padding: 17px;
-            border: 1px solid $principal-white;
-            &:hover {
-                height: 150px;
+            & .profil {
+                border-radius: 50%;
+                padding: 17px;
+                border: 1px solid $principal-white;
+                &:hover {
+                    height: 150px;
+                }
+            }
+            & p {
+                letter-spacing: 4px;
+                text-align: center;
             }
         }
     }
@@ -107,10 +115,26 @@
         text-align: center;
         color: $principal-white;
         cursor: pointer;
-        margin-top: 5vh;
+        margin-top: 3vh;
+        font-family: $general-text-light;
+        font-size: 0.8rem;
         display: none;
-        .coverture-page-row_icone--returnTimeline svg {
-            margin-top: -3vh;
+        .coverture-page-row_icone {
+            & p {
+                letter-spacing: 4px;
+                text-align: center;
+            }
+        }
+        .couverture-page-row_allCategories {
+            position: fixed;
+            bottom: 3vh;
+            & p {
+                letter-spacing: 2px;
+                & svg {
+                    margin-right: 5px;
+                    margin-top: -2px;
+                }
+            }
         }
     }
 }
@@ -133,7 +157,6 @@
             background-size: cover;
             height: $full-width;
             border-radius: 3px;
-            border-right: 1px solid $principal-white;
             background: linear-gradient(90deg, rgba(16, 132, 237, .02) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, .02) 100%);
             @include centered-bloc;
             & .row {
@@ -198,7 +221,6 @@
 .eventDescription {
     height: $full-width;
     border-radius: 3px;
-    background: linear-gradient(90deg, rgba(16, 132, 237, .02) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, .02) 100%);
     @include centered-bloc;
     padding-left: 20px;
     padding-right: 20px;

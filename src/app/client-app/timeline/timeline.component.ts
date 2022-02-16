@@ -82,7 +82,7 @@ export class TimelineComponent implements OnInit {
         $('#couverture-page-categories-row').css( "display", "none");
     });
 
-    //SEARCHBAR CODE
+    /*SEARCHBAR CODE
     $(".searchbarFormControl").on('keyup', function(event) {
         event.preventDefault();
         $('.searchbar-dropdown-bloc').show(500);
@@ -90,6 +90,17 @@ export class TimelineComponent implements OnInit {
     $(".searchbarFormControl").on('blur', function(event) {
         event.preventDefault();
         $('.searchbar-dropdown-bloc').fadeOut(300);
+    });*/
+
+    //DISPLAY PARAMS PAGE
+    $(".coverture-page-row_icone--params").on('click', function(event) {
+        event.preventDefault();
+        $('.userSessionInfo-bloc').css( "display", "none");
+        $('.userEvents-bloc').css( "display", "none");
+        $('.userWallet-bloc').css( "display", "none");
+        $('.userSettings-bloc').fadeIn(700);
+        $('.form-control-profil').css("font-size", "0.85rem");
+        $('.form-select-profil').css("font-size", "0.85rem");
     });
   }
 

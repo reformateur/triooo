@@ -22,7 +22,7 @@ import { EventComponent } from './client-app/event/event.component';
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'timeline', component: TimelineComponent },
-  { path: 'timeline/musique', component: MusiqueComponent },
+  { path: 'timeline/concert', component: MusiqueComponent },
   { path: 'timeline/humour', component: HumourComponent },
   { path: 'timeline/coaching', component: CoachingComponent },
   { path: 'profil', component: UserProfilComponent },

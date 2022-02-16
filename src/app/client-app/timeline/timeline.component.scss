@@ -57,7 +57,7 @@
 
 .navbar-brand {
     cursor: pointer;
-    & img {
+    & .setting-icon {
         border-radius: 50px;
         border: 1px solid $principal-white;
         padding: 5px;
@@ -80,24 +80,32 @@
         @include centered-bloc;
         width: 60%;
         text-align: center;
-        color: $principal-white;
         cursor: pointer;
+        color: $principal-white;
         margin-top: 5vh;
-        & img {
-            border-radius: 50%;
-            padding: 10px;
-            border: 1px solid $principal-white;
-            margin-bottom: 10px;
-            &:hover {
-                height: 140px;
+        font-family: $general-text-light;
+        font-size: 0.8rem;
+        .coverture-page-row_icone {
+            & img {
+                border-radius: 50%;
+                padding: 10px;
+                border: 1px solid $principal-white;
+                margin-bottom: 10px;
+                &:hover {
+                    height: 140px;
+                }
             }
-        }
-        & .profil {
-            border-radius: 50%;
-            padding: 17px;
-            border: 1px solid $principal-white;
-            &:hover {
-                height: 150px;
+            & .profil {
+                border-radius: 50%;
+                padding: 17px;
+                border: 1px solid $principal-white;
+                &:hover {
+                    height: 150px;
+                }
+            }
+            & p {
+                letter-spacing: 4px;
+                text-align: center;
             }
         }
     }
@@ -106,10 +114,26 @@
         text-align: center;
         color: $principal-white;
         cursor: pointer;
-        margin-top: 5vh;
+        margin-top: 3vh;
+        font-family: $general-text-light;
+        font-size: 0.8rem;
         display: none;
-        .coverture-page-row_icone--returnTimeline svg {
-            margin-top: -3vh;
+        .coverture-page-row_icone {
+            & p {
+                letter-spacing: 4px;
+                text-align: center;
+            }
+        }
+        .couverture-page-row_allCategories {
+            position: fixed;
+            bottom: 3vh;
+            & p {
+                letter-spacing: 2px;
+                & svg {
+                    margin-right: 3px;
+                    margin-top: -3px;
+                }
+            }
         }
     }
 }
@@ -194,9 +218,9 @@
         height: 80px;
         & .form-control {
             height: 100%;
+            font-size: 1rem;
             background: linear-gradient(90deg, rgba(250, 250, 249, .06) 0%, rgba(250, 250, 249, .6) 32%, rgba(250, 250, 249, .2) 100%);
             border: none;
-            font-size: 1.2rem;
             text-align: center;
             &:focus {
                 border-color: #ced4da;
@@ -219,7 +243,6 @@
 
 ::placeholder {
     color: $principal-dark;
-    font-size: 1.1rem;
 }
 
 //searchbar dropdown bloc
@@ -271,7 +294,7 @@
                 margin-left: -15px;
             }
             & span {
-                margin-left: 15px;
+                margin-left: 10px;
                 margin-top: 40px;
             }
         }

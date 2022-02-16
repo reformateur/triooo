@@ -16,17 +16,18 @@
                 </div>
             </div>
             <a class="navbar-brand">
-                <img src="../../../assets/favicon/Triooo_setting_Icone.jpg" id="setting-icon" alt="setting icone" width="35">
+                <img src="../../../assets/favicon/Triooo_setting_Icone.jpg" class="setting-icon" id="setting-icon" alt="setting icone" width="35">
             </a>
         </div>
     </nav>
+
 
     <!-- COVER -->
     <div class="couverture-page">
         <!-- SETTING OPTIONS -->
         <div class="row couverture-page-row" id="couverture-page-row">
             <div class="col-lg-4 coverture-page-row_icone">
-                <a routerLink="#" class="a-menuAndCategories">
+                <a routerLink="/register" class="a-menuAndCategories">
                     <img src="../../../assets/favicon/Triooo_closed_icone.png" height="110" alt="icone deconnexion">
                     <div>
                         <p> Déconnexion </p>
@@ -35,14 +36,14 @@
             </div>
             <div class="col-lg-4 coverture-page-row_icone">
                 <a routerLink="/profil" class="a-menuAndCategories">
-                    <img src="../../../assets/images/Triooo_assets1A.jpeg" height="130" class="profil" alt="photo profil utilisateur">
+                    <img src="../../../assets/images/Triooo_assets1A.jpeg" height="120" class="profil" alt="photo profil utilisateur">
                     <div>
                         <p> Mon compte </p>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 coverture-page-row_icone">
-                <a routerLink="#" class="a-menuAndCategories">
+            <div class="col-lg-4 coverture-page-row_icone coverture-page-row_icone--params">
+                <a routerLink="/profil" class="a-menuAndCategories">
                     <img src="../../../assets/favicon/Triooo_setting_Icone.jpg" height="110" alt="icone paramètre">
                     <div>
                         <p> Paramètres </p>
@@ -70,19 +71,26 @@
                 </a>
             </div>
             <div class="col-lg-3 coverture-page-row_icone">
-                <a routerLink="/timeline/musique" class="a-menuAndCategories">
-                    <img src="../../../assets/favicon/Triooo_music.png" height="110" alt="icone  musique">
+                <a routerLink="/timeline/concert" class="a-menuAndCategories">
+                    <img src="../../../assets/favicon/Triooo_music.png" height="110" alt="icone concert">
                     <div>
-                        <p> Musique </p>
+                        <p> Concert </p>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-2 coverture-page-row_icone coverture-page-row_icone--returnTimeline">
-                <a routerLink="/timeline" class="a-menuAndCategories">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                    </svg>
-                </a>
+            <div class="col-lg-12 couverture-page-row_allCategories">
+                <div class="row">
+                    <a routerLink="/timeline" class="a-menuAndCategories">
+
+                        <div>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                </svg> toutes les categories
+                            </p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -123,7 +131,7 @@
                     </div>
                     <div class="description">
                         <p> Le pasteur et chantre Lord Lombo vous donne rendez-vous le dimanche 02 janvier 2022 dans un concert triooo denommé SOUFFLE DE VIE. Une adoration hors du commun pour débuter l'année 2022. Pour un ticket acheté un pass internet offert
-                            </p>
+                        </p>
                     </div>
                     <div class="statut">
                         <p> <span> STATUT DE DIFFUSION : </span> Le concert sera diffusé dans 10 jours </p>
