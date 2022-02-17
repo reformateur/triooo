@@ -31,17 +31,14 @@
 .btn-categories {
     background: $secondary-blue;
     background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
-    font-size: $button-text-size;
+    font-size: $small-text-size;
     margin-left: 20px;
     @include button-default;
     &:hover {
         background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, 0) 32%, rgba(16, 132, 237, .1) 100%);
     }
     &:focus {
-        border-color: #ced4da;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
+        @include button-focus;
     }
 }
 
@@ -50,8 +47,8 @@
     .nav-link {
         margin-right: 50px;
         color: $principal-dark;
+        font-size: $small-text-size;
         cursor: pointer;
-        font-size: $button-text-size;
     }
 }
 
@@ -77,20 +74,20 @@
     z-index: 30;
     display: none;
     .couverture-page-row {
-        @include centered-bloc;
+        color: $principal-white;
+        font-family: $general-text-light;
+        margin-top: 5vh;
+        font-size: $verysmall-text-size;
         width: 60%;
         text-align: center;
         cursor: pointer;
-        color: $principal-white;
-        margin-top: 5vh;
-        font-family: $general-text-light;
-        font-size: 0.8rem;
+        @include centered-bloc;
         .coverture-page-row_icone {
             & img {
-                border-radius: 50%;
                 padding: 10px;
-                border: 1px solid $principal-white;
                 margin-bottom: 10px;
+                border-radius: 50%;
+                border: 1px solid $principal-white;
                 &:hover {
                     height: 140px;
                 }
@@ -110,13 +107,13 @@
         }
     }
     .couverture-page-categories-row {
-        width: 70%;
-        text-align: center;
         color: $principal-white;
-        cursor: pointer;
-        margin-top: 3vh;
         font-family: $general-text-light;
-        font-size: 0.8rem;
+        width: 70%;
+        margin-top: 3vh;
+        font-size: $verysmall-text-size;
+        text-align: center;
+        cursor: pointer;
         display: none;
         .coverture-page-row_icone {
             & p {
@@ -143,14 +140,14 @@
     height: 90vh;
     & .coverage-top-row {
         height: $full-width;
-        @include centered-bloc;
-        text-align: center;
         padding: 0 30px 0 80px;
+        text-align: center;
+        @include centered-bloc;
         &__left-text {
             z-index: 20;
             text-align: left;
             & h1 {
-                font-size: 3rem;
+                font-size: $great-title-size;
                 font-family: $general-text-bold;
                 margin-bottom: 20px;
             }
@@ -160,18 +157,15 @@
             }
             & button {
                 background: $secondary-blue;
-                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
-                font-size: $button-text-size;
-                @include button-default;
+                font-size: $small-text-size;
                 border-radius: 15px;
+                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+                @include button-default;
                 &:hover {
                     background: linear-gradient(90deg, rgba(16, 132, 237, .2) 0%, rgba(16, 132, 237, .2) 32%, rgba(16, 132, 237, .1) 100%);
                 }
                 &:focus {
-                    border-color: #ced4da;
-                    border: none !important;
-                    outline: none !important;
-                    box-shadow: none !important;
+                    @include button-focus;
                 }
             }
         }
@@ -187,8 +181,8 @@
         }
         &__right-text {
             z-index: 20;
-            text-align: left;
             padding-left: 40px;
+            text-align: left;
             & h4 {
                 font-size: 1.5rem;
                 font-family: $general-text-bold;
@@ -223,20 +217,17 @@
             border: none;
             text-align: center;
             &:focus {
-                border-color: #ced4da;
-                border: none !important;
-                outline: none !important;
-                box-shadow: none !important;
+                @include button-focus;
             }
         }
         & .input-group-text {
+            color: $principal-blue;
             height: 100%;
             background: linear-gradient(90deg, rgba(250, 250, 249, .2) 0%, rgba(250, 250, 249, .1) 32%, rgba(250, 250, 249, .2) 100%);
-            border: none;
-            color: $principal-blue;
             width: 100px;
-            @include centered-bloc;
+            border: none;
             cursor: pointer;
+            @include centered-bloc;
         }
     }
 }
@@ -247,7 +238,6 @@
 
 //searchbar dropdown bloc
 .searchbar-dropdown-bloc {
-    width: 100%;
     height: auto;
     overflow-x: hidden;
     overflow-y: auto;
@@ -279,9 +269,9 @@
             background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, 0) 100%);
             height: 60px;
             width: 180px;
-            text-align: left;
             padding-top: 15px;
             border-radius: 3px;
+            text-align: left;
             cursor: pointer;
             &:hover {
                 background: linear-gradient(90deg, rgba(16, 132, 237, .07) 0%, rgba(16, 132, 237, .09) 32%, rgba(16, 132, 237, 0) 100%);
@@ -513,11 +503,11 @@
 .event-details {
     padding: 0;
     &-row {
-        @include centered-bloc;
-        margin-top: -10px;
         height: $full-width;
+        margin-top: -10px;
+        @include centered-bloc;
         &__intro {
-            font-size: 0.7rem;
+            font-size: $toosmall-text-size;
             cursor: pointer;
             & svg {
                 color: $principal-blue;
@@ -531,24 +521,35 @@
             font-size: 0.9rem;
             & button {
                 background: $secondary-blue;
-                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
-                font-size: $button-text-size;
-                @include button-default;
+                font-size: $small-text-size;
                 border-radius: 15px;
                 margin-top: -10px;
+                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+                @include button-default;
                 &:hover {
                     background: linear-gradient(90deg, rgba(16, 132, 237, .2) 0%, rgba(16, 132, 237, .2) 32%, rgba(16, 132, 237, .1) 100%);
                 }
                 &:focus {
-                    border-color: #ced4da;
-                    border: none !important;
-                    outline: none !important;
-                    box-shadow: none !important;
+                    @include button-focus;
                 }
             }
         }
         &__nameAndContry {
-            font-size: 0.8rem;
+            font-size: $verysmall-text-size;
         }
+    }
+}
+
+//copyright
+.copyright-bloc {
+    text-align: center;
+    font-size: $toosmall-text-size;
+    margin-top: 50px;
+    svg {
+        margin-right: 10px;
+        color: $principal-blue;
+    }
+    p {
+        margin-top: 20px;
     }
 }

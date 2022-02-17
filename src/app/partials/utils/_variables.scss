@@ -13,6 +13,7 @@ $coverage-image-timeline: url('../../../assets/images/Triooo_assets1C.png');
 $principal-blue: #005ED1;
 $secondary-blue: #1084ED;
 $principal-dark: #192432;
+$principal-white: #fafaf9;
 $principal-transparent-cover: linear-gradient(90deg,
 rgba(25,
 36,
@@ -26,12 +27,12 @@ rgba(25,
 36,
 50,
 .75) 100%);
-$principal-white: #fafaf9;
 //text size
 $great-title-size: 3rem;
 $middle-title-size: 1rem;
-$button-text-size: .9rem;
 $small-text-size: 0.9rem;
+$verysmall-text-size: 0.8rem;
+$toosmall-text-size: 0.7rem;
 //text-police
 $general-text-police: ('Nexa',
 sans-serif);

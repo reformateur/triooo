@@ -37,6 +37,14 @@
     justify-content: center;
 }
 
+//buttom focus
+@mixin button-focus {
+    border-color: #ced4da;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 //event illustration image
 @mixin event-image {
     background-size: contain;
