@@ -25,23 +25,20 @@
     margin-top: 10px;
     background: linear-gradient(90deg, rgba(250, 250, 249, .1) 0%, rgba(250, 250, 249, .3) 32%, rgba(250, 250, 249, .2) 100%);
     height: 70px;
-    z-index: 35;
+    z-index: $z-index-strong;
 }
 
 .btn-categories {
     background: $secondary-blue;
     background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
-    font-size: $button-text-size;
+    font-size: $small-text-size;
     margin-left: 20px;
     @include button-default;
     &:hover {
         background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, 0) 32%, rgba(16, 132, 237, .1) 100%);
     }
     &:focus {
-        border-color: #ced4da;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
+        @include button-focus;
     }
 }
 
@@ -50,14 +47,14 @@
     .nav-link {
         margin-right: 50px;
         color: $principal-dark;
+        font-size: $small-text-size;
         cursor: pointer;
-        font-size: $button-text-size;
     }
 }
 
 .navbar-brand {
     cursor: pointer;
-    & img {
+    & .setting-icon {
         border-radius: 50px;
         border: 1px solid $principal-white;
         padding: 5px;
@@ -74,42 +71,66 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 30;
+    z-index: $z-index-strong;
     display: none;
     .couverture-page-row {
-        @include centered-bloc;
+        color: $principal-white;
+        font-family: $general-text-light;
+        margin-top: 5vh;
+        font-size: $verysmall-text-size;
         width: 60%;
         text-align: center;
-        color: $principal-white;
         cursor: pointer;
-        margin-top: 5vh;
-        & img {
-            border-radius: 50%;
-            padding: 10px;
-            border: 1px solid $principal-white;
-            margin-bottom: 10px;
-            &:hover {
-                height: 140px;
+        @include centered-bloc;
+        .coverture-page-row_icone {
+            & img {
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 50%;
+                border: 1px solid $principal-white;
+                &:hover {
+                    height: 140px;
+                }
             }
-        }
-        & .profil {
-            border-radius: 50%;
-            padding: 17px;
-            border: 1px solid $principal-white;
-            &:hover {
-                height: 150px;
+            & .profil {
+                border-radius: 50%;
+                padding: 17px;
+                border: 1px solid $principal-white;
+                &:hover {
+                    height: 150px;
+                }
+            }
+            & p {
+                letter-spacing: 4px;
+                text-align: center;
             }
         }
     }
     .couverture-page-categories-row {
-        width: 70%;
-        text-align: center;
         color: $principal-white;
+        font-family: $general-text-light;
+        width: 70%;
+        margin-top: 3vh;
+        font-size: $verysmall-text-size;
+        text-align: center;
         cursor: pointer;
-        margin-top: 5vh;
         display: none;
-        .coverture-page-row_icone--returnTimeline svg {
-            margin-top: -3vh;
+        .coverture-page-row_icone {
+            & p {
+                letter-spacing: 4px;
+                text-align: center;
+            }
+        }
+        .couverture-page-row_allCategories {
+            position: fixed;
+            bottom: 3vh;
+            & p {
+                letter-spacing: 2px;
+                & svg {
+                    margin-right: 3px;
+                    margin-top: -3px;
+                }
+            }
         }
     }
 }
@@ -119,14 +140,14 @@
     height: 90vh;
     & .coverage-top-row {
         height: $full-width;
-        @include centered-bloc;
-        text-align: center;
         padding: 0 30px 0 80px;
+        text-align: center;
+        @include centered-bloc;
         &__left-text {
-            z-index: 20;
+            z-index: $z-index-small;
             text-align: left;
             & h1 {
-                font-size: 3rem;
+                font-size: $great-title-size;
                 font-family: $general-text-bold;
                 margin-bottom: 20px;
             }
@@ -136,18 +157,15 @@
             }
             & button {
                 background: $secondary-blue;
-                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
-                font-size: $button-text-size;
-                @include button-default;
+                font-size: $small-text-size;
                 border-radius: 15px;
+                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+                @include button-default;
                 &:hover {
                     background: linear-gradient(90deg, rgba(16, 132, 237, .2) 0%, rgba(16, 132, 237, .2) 32%, rgba(16, 132, 237, .1) 100%);
                 }
                 &:focus {
-                    border-color: #ced4da;
-                    border: none !important;
-                    outline: none !important;
-                    box-shadow: none !important;
+                    @include button-focus;
                 }
             }
         }
@@ -155,16 +173,16 @@
             height: $full-width;
             margin-top: -14vh;
             margin-left: -3%;
-            z-index: 5;
+            z-index: $z-index-little;
             @include centered-bloc;
             & img {
                 height: 120vh;
             }
         }
         &__right-text {
-            z-index: 20;
-            text-align: left;
+            z-index: $z-index-small;
             padding-left: 40px;
+            text-align: left;
             & h4 {
                 font-size: 1.5rem;
                 font-family: $general-text-bold;
@@ -358,7 +376,7 @@
         margin-top: -10px;
         height: $full-width;
         &__intro {
-            font-size: 0.7rem;
+            font-size: $toosmall-text-size;
             cursor: pointer;
             & svg {
                 color: $principal-blue;
@@ -369,11 +387,11 @@
             font-family: $general-text-bold;
         }
         &__button {
-            font-size: 0.9rem;
+            font-size: $small-text-size;
             & button {
                 background: $secondary-blue;
                 background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
-                font-size: $button-text-size;
+                font-size: $verysmall-text-size;
                 @include button-default;
                 border-radius: 15px;
                 margin-top: -10px;
@@ -389,7 +407,146 @@
             }
         }
         &__nameAndContry {
-            font-size: 0.8rem;
+            font-size: $verysmall-text-size;
         }
+    }
+}
+
+//notifications bloc
+.notification-icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    position: fixed;
+    left: 15px;
+    bottom: 3vh;
+    z-index: $z-index-middle;
+    @include centered-bloc;
+    &_rowcount {
+        position: absolute;
+        cursor: pointer;
+        color: #FA8072;
+        right: -5px;
+        top: -6px;
+    }
+    &_bloc {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        background: #FA8072;
+        background: linear-gradient(90deg, rgba(250, 128, 114, .2) 0%, rgba(250, 128, 114, .2) 32%, rgba(250, 128, 114, .2) 100%);
+        @include centered-bloc;
+        & div {
+            background: #FA8072;
+            color: $principal-white;
+            border-radius: 50%;
+            height: 35px;
+            width: 35px;
+            @include centered-bloc;
+        }
+    }
+}
+
+.notification-show-bloc {
+    overflow: auto;
+    height: 20vh;
+    width: 45%;
+    position: fixed;
+    top: 40vh;
+    left: 27.5%;
+    z-index: $z-index-verystrong;
+    background: $principal-white;
+    background: linear-gradient(90deg, rgba(250, 250, 249, .02) 0%, rgba(250, 250, 249, .9) 32%, rgba(250, 250, 249, .02) 100%);
+    display: none;
+    .row {
+        height: $full-width;
+        width: $full-width;
+        @include centered-bloc;
+        .one-notication {
+            padding: 0;
+            margin: 0;
+            height: 55px;
+            width: 80%;
+            background: $principal-white;
+            background: linear-gradient(90deg, rgba(250, 250, 249, .3) 0%, rgba(250, 250, 249, .7) 32%, rgba(250, 250, 249, .5) 100%);
+            border-radius: 40px;
+            .row {
+                margin: 0;
+                padding: 0;
+                border-radius: 40px;
+                height: $full-width;
+                width: $full-width;
+                background: $principal-blue;
+                background: linear-gradient(90deg, rgba(16, 132, 237, .02) 0%, rgba(16, 132, 237, .05) 32%, rgba(16, 132, 237, .02) 100%);
+                display: flex;
+                align-content: flex-start;
+                align-items: flex-start;
+                justify-content: flex-start;
+                .notif-icon-popup {
+                    padding: 0;
+                    margin: 0;
+                    div {
+                        position: relative;
+                        top: 7.5px;
+                        left: 6px;
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50px;
+                        margin-right: 25px;
+                        background: #FA8072;
+                        color: $principal-white;
+                        @include centered-bloc;
+                    }
+                }
+                .notif-text-popup {
+                    margin: 0;
+                    padding: 0;
+                    height: 55px;
+                    font-weight: bold;
+                    padding-left: 15px;
+                    display: flex;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: center;
+                    font-size: $verysmall-text-size;
+                }
+                .notif-close-popup {
+                    margin-top: 13px;
+                    margin-left: -8px;
+                    cursor: pointer;
+                    svg {
+                        color: #FA8072;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//copyright
+.copyright-bloc {
+    text-align: center;
+    font-size: $toosmall-text-size;
+    margin-top: 50px;
+    svg {
+        margin-right: 10px;
+    }
+    .bi-facebook {
+        color: #4267B2;
+    }
+    .bi-twitter {
+        color: #1DA1F2;
+    }
+    .bi-instagram {
+        color: #cd486b;
+    }
+    .bi-youtube {
+        color: #FF0000;
+    }
+    .bi-linkedin {
+        color: #0077b5;
+    }
+    p {
+        margin-top: 20px;
     }
 }

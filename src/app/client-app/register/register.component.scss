@@ -25,7 +25,7 @@
     color: $principal-dark;
     cursor: pointer;
     & span {
-        font-size: 1rem;
+        font-size: $middle-title-size;
         font-weight: bold;
         letter-spacing: 1.5px;
     }
@@ -39,13 +39,13 @@
     margin-right: 50px;
     color: $principal-dark;
     cursor: pointer;
-    font-size: $button-text-size;
+    font-size: $verysmall-text-size;
 }
 
 .btn-register {
     background: $secondary-blue;
     background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
-    font-size: $button-text-size;
+    font-size: $verysmall-text-size;
     margin-left: 20px;
     @include button-default;
     &:hover {
@@ -74,13 +74,13 @@
     }
     &__title h1 {
         font-family: $general-text-bold;
-        font-size: 2.6rem;
+        font-size: $small-text-size;
         line-height: 60px;
         margin-top: -40px;
         text-align: left;
     }
     &__text {
-        font-size: .9rem;
+        font-size: $small-text-size;
         margin-top: 35px;
         & p span {
             color: $principal-blue;
@@ -130,7 +130,7 @@
         background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
         border: none;
         border-radius: 10px;
-        font-size: .9rem;
+        font-size: $small-text-size;
         &:focus {
             border-color: #ced4da;
             border: none !important;
