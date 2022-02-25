@@ -109,6 +109,25 @@ export class UserProfilComponent implements OnInit {
         $('.userWallet-bloc').css( "display", "none");
         $('.userSettings-bloc').fadeIn(700);
     });
+
+    //DISPLAY PARAMS PAGE
+    $(".coverture-page-row_icone--params").on('click', function(event) {
+        event.preventDefault();
+        $('.userSessionInfo-bloc').css( "display", "none");
+        $('.userEvents-bloc').css( "display", "none");
+        $('.userWallet-bloc').css( "display", "none");
+        $('.userSettings-bloc').fadeIn(700);
+        $('.form-control-profil').css("font-size", "0.85rem");
+        $('.form-select-profil').css("font-size", "0.85rem");
+    });
+
+    //NOTIFICATIONS CODE
+    $('.notification-icon').click(function() {
+      $('.notification-show-bloc').fadeToggle(800);
+    });
+    $('.notif-close-popup').click(function() {
+      $('.notification-show-bloc').fadeOut(800);
+    });
   }
 
 }
