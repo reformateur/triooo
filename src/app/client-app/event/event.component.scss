@@ -32,7 +32,7 @@
 .btn-categories {
     background: $secondary-blue;
     background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
-    font-size: $button-text-size;
+    font-size: $verysmall-text-size;
     margin-left: 20px;
     @include button-default;
     &:hover {
@@ -52,7 +52,7 @@
         margin-right: 50px;
         color: $principal-dark;
         cursor: pointer;
-        font-size: $button-text-size;
+        font-size: $verysmall-text-size;
     }
 }
 
@@ -193,11 +193,11 @@
             font-family: $general-text-bold;
         }
         &__button {
-            font-size: 0.9rem;
+            font-size: $small-text-size;
             & button {
                 background: $secondary-blue;
                 background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
-                font-size: $button-text-size;
+                font-size: $verysmall-text-size;
                 @include button-default;
                 border-radius: 15px;
                 margin-top: -10px;
@@ -229,7 +229,7 @@
         word-spacing: 5px;
         margin-bottom: 30px;
         & p {
-            font-size: 0.9rem;
+            font-size: $small-text-size;
             font-weight: bold;
         }
     }
@@ -237,13 +237,13 @@
         word-spacing: 3px;
         margin-bottom: 30px;
         & p {
-            font-size: 0.9rem;
+            font-size: $small-text-size;
             text-align: left;
         }
     }
     & .statut {
         word-spacing: 5px;
-        font-size: 0.9rem;
+        font-size: $small-text-size;
         & span {
             font-weight: bold;
         }

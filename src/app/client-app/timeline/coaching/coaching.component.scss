@@ -6,8 +6,8 @@
 @import "~swiper/css/pagination";
 //page container parent
 .page-container-parent {
-    color: $principal-dark;
     padding-bottom: 50px;
+    color: $principal-dark;
 }
 
 .a-menuAndCategories {
@@ -21,18 +21,18 @@
 
 //navbar top
 .navbar {
-    background: $principal-white;
     margin-top: 10px;
-    background: linear-gradient(90deg, rgba(250, 250, 249, .1) 0%, rgba(250, 250, 249, .3) 32%, rgba(250, 250, 249, .2) 100%);
     height: 70px;
     z-index: $z-index-strong;
+    background: $principal-white;
+    background: linear-gradient(90deg, rgba(250, 250, 249, .1) 0%, rgba(250, 250, 249, .3) 32%, rgba(250, 250, 249, .2) 100%);
 }
 
 .btn-categories {
+    margin-left: 20px;
+    font-size: $small-text-size;
     background: $secondary-blue;
     background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
-    font-size: $small-text-size;
-    margin-left: 20px;
     @include button-default;
     &:hover {
         background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, 0) 32%, rgba(16, 132, 237, .1) 100%);
@@ -45,80 +45,80 @@
 .navbar-collapse {
     @include centered-bloc;
     .nav-link {
+        cursor: pointer;
         margin-right: 50px;
         color: $principal-dark;
         font-size: $small-text-size;
-        cursor: pointer;
     }
 }
 
 .navbar-brand {
     cursor: pointer;
     & .setting-icon {
+        padding: 5px;
         border-radius: 50px;
         border: 1px solid $principal-white;
-        padding: 5px;
     }
 }
 
 //cover
 .couverture-page {
-    background: $principal-transparent-cover;
-    width: $full-width;
-    height: $full-height;
-    padding: 0;
-    margin: 0;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
+    padding: 0;
+    margin: 0;
+    background: $principal-transparent-cover;
+    width: $full-width;
+    height: $full-height;
     z-index: $z-index-strong;
-    display: none;
     .couverture-page-row {
-        color: $principal-white;
-        font-family: $general-text-light;
         margin-top: 5vh;
-        font-size: $verysmall-text-size;
         width: 60%;
         text-align: center;
         cursor: pointer;
+        color: $principal-white;
+        font-family: $general-text-light;
+        font-size: $verysmall-text-size;
         @include centered-bloc;
         .coverture-page-row_icone {
             & img {
+                border: 1px solid $principal-white;
+                border-radius: 50%;
                 padding: 10px;
                 margin-bottom: 10px;
-                border-radius: 50%;
-                border: 1px solid $principal-white;
                 &:hover {
                     height: 140px;
                 }
             }
             & .profil {
+                border: 1px solid $principal-white;
                 border-radius: 50%;
                 padding: 17px;
-                border: 1px solid $principal-white;
                 &:hover {
                     height: 150px;
                 }
             }
             & p {
-                letter-spacing: 4px;
                 text-align: center;
+                letter-spacing: 4px;
             }
         }
     }
     .couverture-page-categories-row {
-        color: $principal-white;
-        font-family: $general-text-light;
+        display: none;
+        text-align: center;
+        cursor: pointer;
         width: 70%;
         margin-top: 3vh;
         font-size: $verysmall-text-size;
-        text-align: center;
-        cursor: pointer;
-        display: none;
+        color: $principal-white;
+        font-family: $general-text-light;
         .coverture-page-row_icone {
             & p {
-                letter-spacing: 4px;
                 text-align: center;
+                letter-spacing: 4px;
             }
         }
         .couverture-page-row_allCategories {
@@ -139,26 +139,26 @@
 .coverage-top {
     height: 90vh;
     & .coverage-top-row {
-        height: $full-width;
-        padding: 0 30px 0 80px;
         text-align: center;
+        padding: 0 30px 0 80px;
+        height: $full-width;
         @include centered-bloc;
         &__left-text {
-            z-index: $z-index-small;
             text-align: left;
+            z-index: $z-index-small;
             & h1 {
+                margin-bottom: 20px;
                 font-size: $great-title-size;
                 font-family: $general-text-bold;
-                margin-bottom: 20px;
             }
             & p {
-                font-size: $small-text-size;
                 margin-bottom: 25px;
+                font-size: $small-text-size;
             }
             & button {
-                background: $secondary-blue;
-                font-size: $small-text-size;
                 border-radius: 15px;
+                font-size: $small-text-size;
+                background: $secondary-blue;
                 background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
                 @include button-default;
                 &:hover {
@@ -170,19 +170,19 @@
             }
         }
         &__centered-image {
-            height: $full-width;
             margin-top: -14vh;
             margin-left: -3%;
             z-index: $z-index-little;
+            height: $full-width;
             @include centered-bloc;
             & img {
                 height: 120vh;
             }
         }
         &__right-text {
-            z-index: $z-index-small;
             padding-left: 40px;
             text-align: left;
+            z-index: $z-index-small;
             & h4 {
                 font-size: 1.5rem;
                 font-family: $general-text-bold;
@@ -191,8 +191,8 @@
                 font-size: $small-text-size;
             }
             & .learn-more {
-                color: $principal-blue;
                 cursor: pointer;
+                color: $principal-blue;
             }
         }
     }
@@ -200,44 +200,40 @@
 
 //searchbar bloc
 .searchbar-bloc {
-    background: $principal-white;
-    z-index: 20;
     width: 80%;
-    margin-left: 10%;
-    background: linear-gradient(90deg, rgba(16, 132, 237, 0) 0%, rgba(16, 132, 237, 0.06) 32%, rgba(16, 132, 237, 0) 100%);
     height: 100px;
+    margin-left: 10%;
     border-radius: 3px;
+    z-index: $z-index-middle;
+    background: $principal-white;
+    background: linear-gradient(90deg, rgba(16, 132, 237, 0) 0%, rgba(16, 132, 237, 0.06) 32%, rgba(16, 132, 237, 0) 100%);
     @include centered-bloc;
     & .input-group {
         height: 80px;
         & .form-control {
-            height: 100%;
-            background: linear-gradient(90deg, rgba(250, 250, 249, .2) 0%, rgba(250, 250, 249, .6) 32%, rgba(250, 250, 249, .2) 100%);
             border: none;
-            font-size: 1.2rem;
             text-align: center;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(250, 250, 249, .06) 0%, rgba(250, 250, 249, .6) 32%, rgba(250, 250, 249, .2) 100%);
+            font-size: $middle-title-size;
             &:focus {
-                border-color: #ced4da;
-                border: none !important;
-                outline: none !important;
-                box-shadow: none !important;
+                @include button-focus;
             }
         }
         & .input-group-text {
-            height: 100%;
-            background: linear-gradient(90deg, rgba(250, 250, 249, .2) 0%, rgba(250, 250, 249, .1) 32%, rgba(250, 250, 249, .2) 100%);
             border: none;
-            color: $principal-blue;
-            width: 100px;
-            @include centered-bloc;
             cursor: pointer;
+            height: 100%;
+            width: 100px;
+            background: linear-gradient(90deg, rgba(250, 250, 249, .2) 0%, rgba(250, 250, 249, .1) 32%, rgba(250, 250, 249, .2) 100%);
+            color: $principal-blue;
+            @include centered-bloc;
         }
     }
 }
 
-::placeholder {
+ ::placeholder {
     color: $principal-dark;
-    font-size: 1.1rem;
 }
 
 //events list bloc
@@ -249,13 +245,14 @@
         height: 400px;
         margin-bottom: 20px;
         &__name {
-            background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, 0) 100%);
-            height: 60px;
-            max-width: 290px;
             text-align: left;
+            cursor: pointer;
+            width: auto;
+            max-width: 260px;
+            height: 60px;
             padding-top: 15px;
             border-radius: 3px;
-            cursor: pointer;
+            background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, 0) 100%);
             &:hover {
                 background: linear-gradient(90deg, rgba(16, 132, 237, .07) 0%, rgba(16, 132, 237, .09) 32%, rgba(16, 132, 237, 0) 100%);
             }
@@ -263,11 +260,11 @@
                 margin-left: -15px;
             }
             & svg {
-                color: $principal-blue;
                 margin-left: -15px;
+                color: $principal-blue;
             }
             & span {
-                margin-left: 15px;
+                margin-left: 10px;
                 margin-top: 40px;
             }
         }
@@ -287,9 +284,9 @@
         background: linear-gradient(90deg, rgba(16, 132, 237, .01) 0%, rgba(16, 132, 237, .03) 32%, rgba(16, 132, 237, .06) 100%);
         @include centered-bloc;
         & .row {
+            padding-top: 20px;
             height: $full-width;
             width: $full-width;
-            padding-top: 20px;
             & .event-image {
                 @include event-image;
             }
@@ -348,37 +345,36 @@
 .event-details {
     padding: 0;
     &-row {
-        @include centered-bloc;
         margin-top: -10px;
         height: $full-width;
+        @include centered-bloc;
         &__intro {
-            font-size: 0.7rem;
+            position: relative;
             cursor: pointer;
+            z-index: 35;
+            font-size: $toosmall-text-size;
             & svg {
-                color: $principal-blue;
                 margin-right: 5px;
+                color: $principal-blue;
             }
         }
         &__title {
             font-family: $general-text-bold;
         }
         &__button {
-            font-size: $small-text-size;
+            font-size: 0.9rem;
             & button {
-                background: $secondary-blue;
-                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
-                font-size: $verysmall-text-size;
-                @include button-default;
                 border-radius: 15px;
                 margin-top: -10px;
+                font-size: $small-text-size;
+                background: $secondary-blue;
+                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+                @include button-default;
                 &:hover {
                     background: linear-gradient(90deg, rgba(16, 132, 237, .2) 0%, rgba(16, 132, 237, .2) 32%, rgba(16, 132, 237, .1) 100%);
                 }
                 &:focus {
-                    border-color: #ced4da;
-                    border: none !important;
-                    outline: none !important;
-                    box-shadow: none !important;
+                    @include button-focus;
                 }
             }
         }
@@ -390,34 +386,34 @@
 
 //notifications bloc
 .notification-icon {
-    width: 60px;
-    height: 60px;
     cursor: pointer;
     position: fixed;
     left: 15px;
     bottom: 3vh;
+    width: 60px;
+    height: 60px;
     z-index: $z-index-middle;
     @include centered-bloc;
     &_rowcount {
         position: absolute;
         cursor: pointer;
-        color: #FA8072;
         right: -5px;
         top: -6px;
+        color: $notification-principal-color;
     }
     &_bloc {
         height: 50px;
         width: 50px;
         border-radius: 50px;
-        background: #FA8072;
+        background: $notification-principal-color;
         background: linear-gradient(90deg, rgba(250, 128, 114, .2) 0%, rgba(250, 128, 114, .2) 32%, rgba(250, 128, 114, .2) 100%);
         @include centered-bloc;
         & div {
-            background: #FA8072;
-            color: $principal-white;
             border-radius: 50%;
             height: 35px;
             width: 35px;
+            background: $notification-principal-color;
+            color: $principal-white;
             @include centered-bloc;
         }
     }
@@ -425,12 +421,12 @@
 
 .notification-show-bloc {
     overflow: auto;
-    height: 20vh;
-    width: 45%;
     position: fixed;
-    top: 40vh;
+    top: 45vh;
     left: 27.5%;
-    z-index: $z-index-verystrong;
+    height: 15vh;
+    width: 45%;
+    z-index: $z-index-middle;
     background: $principal-white;
     background: linear-gradient(90deg, rgba(250, 250, 249, .02) 0%, rgba(250, 250, 249, .9) 32%, rgba(250, 250, 249, .02) 100%);
     display: none;
@@ -441,12 +437,16 @@
         .one-notication {
             padding: 0;
             margin: 0;
+            border-radius: 40px;
             height: 55px;
             width: 80%;
             background: $principal-white;
             background: linear-gradient(90deg, rgba(250, 250, 249, .3) 0%, rgba(250, 250, 249, .7) 32%, rgba(250, 250, 249, .5) 100%);
-            border-radius: 40px;
             .row {
+                display: flex;
+                align-content: flex-start;
+                align-items: flex-start;
+                justify-content: flex-start;
                 margin: 0;
                 padding: 0;
                 border-radius: 40px;
@@ -454,10 +454,6 @@
                 width: $full-width;
                 background: $principal-blue;
                 background: linear-gradient(90deg, rgba(16, 132, 237, .02) 0%, rgba(16, 132, 237, .05) 32%, rgba(16, 132, 237, .02) 100%);
-                display: flex;
-                align-content: flex-start;
-                align-items: flex-start;
-                justify-content: flex-start;
                 .notif-icon-popup {
                     padding: 0;
                     margin: 0;
@@ -469,29 +465,29 @@
                         width: 40px;
                         border-radius: 50px;
                         margin-right: 25px;
-                        background: #FA8072;
+                        background: $notification-principal-color;
                         color: $principal-white;
                         @include centered-bloc;
                     }
                 }
                 .notif-text-popup {
-                    margin: 0;
-                    padding: 0;
-                    height: 55px;
-                    font-weight: bold;
-                    padding-left: 15px;
                     display: flex;
                     align-items: center;
                     align-content: center;
                     justify-content: center;
+                    font-weight: bold;
+                    margin: 0;
+                    padding: 0;
+                    height: 55px;
+                    padding-left: 15px;
                     font-size: $verysmall-text-size;
                 }
                 .notif-close-popup {
+                    cursor: pointer;
                     margin-top: 13px;
                     margin-left: -8px;
-                    cursor: pointer;
                     svg {
-                        color: #FA8072;
+                        color: $notification-principal-color;
                     }
                 }
             }

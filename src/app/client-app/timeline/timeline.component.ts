@@ -1,9 +1,10 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import * as $ from 'jquery';
 import { SwiperComponent } from "swiper/angular";
-import SwiperCore, { EffectCoverflow, Pagination, Navigation } from "swiper";
+import SwiperCore, {SwiperOptions, EffectCoverflow, Pagination, Navigation } from "swiper";
 // install Swiper modules
 SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
+
 
 @Component({
   selector: 'app-timeline',
@@ -12,7 +13,7 @@ SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
   encapsulation: ViewEncapsulation.None
 })
 export class TimelineComponent implements OnInit {
-
+  
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   slideNext(){
     this?.swiper?.swiperRef.slideNext(100);
@@ -26,7 +27,6 @@ export class TimelineComponent implements OnInit {
 
   ngOnInit(): void {
     //ON INIT STATE
-
 
     //ON CLICK SETTING ICON (NAVBAR)
     $("#setting-icon").on('click', function(event) {
@@ -102,6 +102,25 @@ export class TimelineComponent implements OnInit {
         $('.form-control-profil').css("font-size", "0.85rem");
         $('.form-select-profil').css("font-size", "0.85rem");
     });
+
+    //NOTIFICATIONS CODE
+    $('.notification-icon').click(function() {
+      $('.notification-show-bloc').fadeToggle(800);
+    });
+    $('.notif-close-popup').click(function() {
+      $('.notification-show-bloc').fadeOut(800);
+    });
+
+    /*SHOW SYNOPSIS CODE
+    $('.notification-icon').click(function() {
+      $('.synopsis-bloc').fadeIn(1000);
+      $(".synopsis-bloc").css({
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        });
+    });*/
+
   }
 
 }

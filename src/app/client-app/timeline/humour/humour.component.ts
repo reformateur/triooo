@@ -79,6 +79,27 @@ export class HumourComponent implements OnInit {
         $('#couverture-page-row').css( "display", "none");
         $('#couverture-page-categories-row').css( "display", "none");
     });
+
+    //DISPLAY PARAMS PAGE
+    $(".coverture-page-row_icone--params").on('click', function(event) {
+        event.preventDefault();
+        $('.userSessionInfo-bloc').css( "display", "none");
+        $('.userEvents-bloc').css( "display", "none");
+        $('.userWallet-bloc').css( "display", "none");
+        $('.userSettings-bloc').fadeIn(700);
+        $('.form-control-profil').css("font-size", "0.85rem");
+        $('.form-select-profil').css("font-size", "0.85rem");
+    });
+
+    //NOTIFICATIONS CODE
+    $(".notification-icon").on('click', function(event) {
+        event.preventDefault();
+        $('.notification-show-bloc').fadeToggle(800);
+    });
+    $(".notif-close-popup").on('click', function(event) {
+        event.preventDefault();
+        $('.notification-show-bloc').fadeOut(800);
+    });
   }
 
 }
