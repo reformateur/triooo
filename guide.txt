@@ -6,10 +6,9 @@
 
 - page timeline : [ (4) custom searchbar / (6) optimisation typescript du code/ (5) responsive/] 
 
-- pages categories : [ idem timeline/ title categorie text margin/ (1) ajout de l'option home dans les categories/ (2) lien de deconnexion, lien d'accès au params, lien des event/ (3) réel textes & copyright/ 
-			(4) custom searchbar /(5) optimisation du code / (6) optimisation typescript du code/ (7) responsive/ (8) système notifications & synopsis ]
+- pages categories : [ (4) custom searchbar /(5) optimisation du code / (6) optimisation typescript du code/ (7) responsive/ (8) synopsis ]
 
-- pages profil : [ idem timeline ]
+- pages profil : [ harmonisation et responsive restants/ portefeuille et settings forms ]
 
 - page evenement : [ idem timeline ]
 

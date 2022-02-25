@@ -142,17 +142,17 @@
     margin-left: 50px;
     margin-right: 50px;
     >.row {
+        text-align: center;
         width: 100%;
         @include centered-bloc;
-        text-align: center;
         & h1 {
             font-family: $general-text-bold;
         }
         & p {
-            font-size: 0.9rem;
+            font-size: $small-text-size;
             & span {
-                font-family: $general-text-bold;
                 cursor: pointer;
+                font-family: $general-text-bold;
             }
         }
     }
@@ -164,24 +164,24 @@
     width: $full-width;
     @include centered-bloc;
     >.row {
+        text-align: center;
         width: 100%;
         padding-left: 70px;
         @include centered-bloc;
-        text-align: center;
         .OneTable {
-            background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, 0) 100%);
+            text-align: left;
+            cursor: pointer;
             height: 60px;
             width: 200px;
-            text-align: left;
             padding-top: 15px;
             margin-right: 60px;
             border-radius: 5px;
-            cursor: pointer;
+            background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, 0) 100%);
             &:hover {
                 background: linear-gradient(90deg, rgba(16, 132, 237, .07) 0%, rgba(16, 132, 237, .09) 32%, rgba(16, 132, 237, 0) 100%);
             }
             & p {
-                font-size: 0.9rem;
+                font-size: $small-text-size;
                 & img {
                     margin-left: -25px;
                 }
@@ -196,41 +196,41 @@
 
 //USER SESSION INFO BLOC
 .userSessionInfo-bloc {
+    height: auto;
     margin-top: 40px;
+    max-height: 65vh;
     width: $full-width;
     @include centered-bloc;
-    height: auto;
-    max-height: 65vh;
     >.row {
+        text-align: center;
         width: 100%;
         @include centered-bloc;
-        text-align: center;
         & .userSessionInfo {
-            @include centered-bloc;
-            height: $full-width;
-            margin-top: 5vh;
             cursor: pointer;
+            margin-top: 5vh;
+            height: $full-width;
+            @include centered-bloc;
             p {
-                font-size: 0.9rem;
                 text-align: left;
                 font-weight: bold;
+                font-size: $small-text-size;
                 span {
-                    font-size: 0.8rem;
                     font-weight: normal;
+                    font-size: $verysmall-text-size;
                 }
             }
         }
         & .profilImageCentered {
+            cursor: pointer;
+            border-radius: 40px;
             height: $full-width;
             @include centered-bloc;
-            border-radius: 40px;
-            cursor: pointer;
             & img {
+                border: 1px solid #909497;
+                border-radius: 44%;
                 height: 55vh;
                 width: 300px;
                 padding: 20px;
-                border: 1px solid #909497;
-                border-radius: 44%;
             }
         }
         & .bloc-right {
@@ -247,23 +247,23 @@
 
 //USER WALLET BLOC
 .userWallet-bloc {
-    margin-top: 40px;
-    margin-left: 50px;
-    margin-right: 50px;
+    display: none;
     text-align: center;
     height: auto;
     max-height: 65vh;
-    display: none;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 //USER EVENTS BLOC
 .userEvents-bloc {
+    display: none;
+    height: auto;
+    max-height: 65vh;
     margin-top: 40px;
     margin-left: 50px;
     margin-right: 50px;
-    height: auto;
-    max-height: 65vh;
-    display: none;
 }
 
 .mySwiper {
@@ -279,9 +279,9 @@
         background: linear-gradient(90deg, rgba(16, 132, 237, .01) 0%, rgba(16, 132, 237, .03) 32%, rgba(16, 132, 237, .06) 100%);
         @include centered-bloc;
         & .row {
+            padding-top: 20px;
             height: $full-width;
             width: $full-width;
-            padding-top: 20px;
             & .event-image {
                 @include event-image;
             }
@@ -313,15 +313,17 @@
 .event-details {
     padding: 0;
     &-row {
-        @include centered-bloc;
         margin-top: -10px;
         height: $full-width;
+        @include centered-bloc;
         &__intro {
-            font-size: 0.7rem;
+            position: relative;
             cursor: pointer;
+            z-index: 35;
+            font-size: $toosmall-text-size;
             & svg {
-                color: $principal-blue;
                 margin-right: 5px;
+                color: $principal-blue;
             }
         }
         &__title {
@@ -330,53 +332,51 @@
         &__button {
             font-size: 0.9rem;
             & button {
-                background: $secondary-blue;
-                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
-                font-size: $verysmall-text-size;
-                @include button-default;
                 border-radius: 15px;
                 margin-top: -10px;
+                font-size: $small-text-size;
+                background: $secondary-blue;
+                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .1) 32%, rgba(16, 132, 237, 0) 100%);
+                @include button-default;
                 &:hover {
                     background: linear-gradient(90deg, rgba(16, 132, 237, .2) 0%, rgba(16, 132, 237, .2) 32%, rgba(16, 132, 237, .1) 100%);
                 }
                 &:focus {
-                    border-color: #ced4da;
-                    border: none !important;
-                    outline: none !important;
-                    box-shadow: none !important;
+                    @include button-focus;
                 }
             }
         }
         &__nameAndContry {
-            font-size: 0.8rem;
+            font-size: $verysmall-text-size;
         }
     }
 }
 
 //USER SETTINGS BLOC
 .userSettings-bloc {
+    height: 65vh;
     margin-top: 40px;
     margin-left: 50px;
     margin-right: 50px;
-    height: 65vh;
     @include centered-bloc;
     display: none;
     &>.row {
+        @include centered-bloc;
         height: $full-width;
         width: $full-width;
-        @include centered-bloc;
         & .setting-header {
+            text-align: center;
             margin-bottom: 20px;
             & p {
-                font-size: 0.8rem;
+                font-size: $verysmall-text-size;
             }
         }
         & .setting-InputBloc {
             & .inputBloc {
-                @include centered-bloc;
-                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, 0.03) 100%);
                 height: 250px;
                 padding-top: 15px;
+                background: linear-gradient(90deg, rgba(16, 132, 237, .1) 0%, rgba(16, 132, 237, .02) 32%, rgba(16, 132, 237, 0.03) 100%);
+                @include centered-bloc;
                 & .input-group {
                     height: 60px;
                     width: 90%;
@@ -384,63 +384,57 @@
                     margin-bottom: 15px;
                     & .form-control,
                     & .form-select {
+                        border: none;
+                        text-align: left;
                         height: 60px;
                         background: linear-gradient(90deg, rgba(250, 250, 249, .06) 0%, rgba(250, 250, 249, .6) 32%, rgba(250, 250, 249, .2) 100%);
-                        border: none;
-                        font-size: 0.85rem;
-                        text-align: left;
+                        font-size: $verysmall-text-size;
                         &:focus {
-                            border-color: #ced4da;
-                            border: none !important;
-                            outline: none !important;
-                            box-shadow: none !important;
+                            @include button-focus;
                         }
                     }
                      ::-webkit-input-placeholder {
                         color: $principal-dark;
-                        font-size: 0.85rem;
+                        font-size: $verysmall-text-size;
                     }
                     & select {
                         cursor: pointer;
                     }
                     & .input-group-text {
-                        height: 60px;
-                        background: linear-gradient(90deg, rgba(250, 250, 249, .2) 0%, rgba(250, 250, 249, .1) 32%, rgba(250, 250, 249, .2) 100%);
                         border: none;
-                        color: $principal-blue;
-                        width: 100px;
-                        @include centered-bloc;
                         cursor: pointer;
+                        height: 60px;
+                        width: 100px;
+                        background: linear-gradient(90deg, rgba(250, 250, 249, .2) 0%, rgba(250, 250, 249, .1) 32%, rgba(250, 250, 249, .2) 100%);
+                        color: $principal-blue;
+                        @include centered-bloc;
                     }
                 }
                 & .btn-changePackage {
-                    background: $principal-blue;
-                    color: $principal-white;
-                    font-size: 0.9rem;
                     height: 60px;
                     width: 85%;
                     margin-left: 7.5%;
                     margin-bottom: 15px;
+                    background: $principal-blue;
+                    color: $principal-white;
+                    font-size: $small-text-size;
                     &:focus {
-                        border-color: #ced4da;
-                        border: none !important;
-                        outline: none !important;
-                        box-shadow: none !important;
+                        @include button-focus;
                     }
                 }
             }
         }
         & .setting-image {
             & .profilImageCentered {
-                @include centered-bloc;
-                border-radius: 40px;
                 cursor: pointer;
+                border-radius: 40px;
+                @include centered-bloc;
                 & img {
+                    border: 1px solid #909497;
+                    border-radius: 44%;
                     height: 55vh;
                     width: 300px;
                     padding: 20px;
-                    border: 1px solid #909497;
-                    border-radius: 44%;
                 }
             }
         }
